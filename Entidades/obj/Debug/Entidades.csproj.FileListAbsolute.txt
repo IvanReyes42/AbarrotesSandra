@@ -1,0 +1,6 @@
+C:\Users\Ivan Reyes Ortega\Desktop\abarrotessandra\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\Ivan Reyes Ortega\Desktop\abarrotessandra\Entidades\bin\Debug\Entidades.exe.config
+C:\Users\Ivan Reyes Ortega\Desktop\abarrotessandra\Entidades\bin\Debug\Entidades.exe
+C:\Users\Ivan Reyes Ortega\Desktop\abarrotessandra\Entidades\bin\Debug\Entidades.pdb
+C:\Users\Ivan Reyes Ortega\Desktop\abarrotessandra\Entidades\obj\Debug\Entidades.exe
+C:\Users\Ivan Reyes Ortega\Desktop\abarrotessandra\Entidades\obj\Debug\Entidades.pdb

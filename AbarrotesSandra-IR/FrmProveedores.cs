@@ -16,5 +16,11 @@ namespace AbarrotesSandra_IR
         {
             InitializeComponent();
         }
+
+        private void btnRegresar_Click(object sender, EventArgs e)
+        {
+            FrmMenuPrincipal.op = 0;
+            Close();
+        }
     }
 }

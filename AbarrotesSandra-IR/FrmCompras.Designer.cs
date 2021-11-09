@@ -29,7 +29,7 @@ namespace AbarrotesSandra_IR
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btnRegresar = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -53,20 +53,21 @@ namespace AbarrotesSandra_IR
             this.label3 = new System.Windows.Forms.Label();
             this.txtId = new System.Windows.Forms.TextBox();
             this.txtFechaBusqueda = new System.Windows.Forms.DateTimePicker();
-            this.btnBuscar = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnRegresar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.GrupoCompra.SuspendLayout();
             this.SuspendLayout();
             // 
-            // pictureBox2
+            // btnRegresar
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(1250, 11);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(48, 48);
-            this.pictureBox2.TabIndex = 12;
-            this.pictureBox2.TabStop = false;
+            this.btnRegresar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRegresar.Location = new System.Drawing.Point(1250, 11);
+            this.btnRegresar.Name = "btnRegresar";
+            this.btnRegresar.Size = new System.Drawing.Size(48, 48);
+            this.btnRegresar.TabIndex = 12;
+            this.btnRegresar.TabStop = false;
+            this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
             // 
             // label2
             // 
@@ -102,7 +103,7 @@ namespace AbarrotesSandra_IR
             // 
             this.textBox1.Location = new System.Drawing.Point(188, 97);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(253, 30);
+            this.textBox1.Size = new System.Drawing.Size(379, 30);
             this.textBox1.TabIndex = 13;
             // 
             // dataGridView1
@@ -300,23 +301,10 @@ namespace AbarrotesSandra_IR
             // 
             this.txtFechaBusqueda.CustomFormat = "yyyy-MM-dd";
             this.txtFechaBusqueda.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.txtFechaBusqueda.Location = new System.Drawing.Point(463, 97);
+            this.txtFechaBusqueda.Location = new System.Drawing.Point(573, 97);
             this.txtFechaBusqueda.Name = "txtFechaBusqueda";
-            this.txtFechaBusqueda.Size = new System.Drawing.Size(151, 30);
+            this.txtFechaBusqueda.Size = new System.Drawing.Size(209, 30);
             this.txtFechaBusqueda.TabIndex = 9;
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.BackColor = System.Drawing.Color.DimGray;
-            this.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscar.ForeColor = System.Drawing.Color.White;
-            this.btnBuscar.Location = new System.Drawing.Point(647, 92);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(126, 40);
-            this.btnBuscar.TabIndex = 19;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = false;
             // 
             // FrmCompras
             // 
@@ -325,7 +313,6 @@ namespace AbarrotesSandra_IR
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1314, 676);
             this.ControlBox = false;
-            this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.txtFechaBusqueda);
             this.Controls.Add(this.GrupoCompra);
             this.Controls.Add(this.btnModificar);
@@ -333,7 +320,7 @@ namespace AbarrotesSandra_IR
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.btnRegresar);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox1);
             this.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -344,7 +331,7 @@ namespace AbarrotesSandra_IR
             this.Name = "FrmCompras";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmCompras";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnRegresar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.GrupoCompra.ResumeLayout(false);
@@ -356,7 +343,7 @@ namespace AbarrotesSandra_IR
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox btnRegresar;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
@@ -366,7 +353,6 @@ namespace AbarrotesSandra_IR
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.GroupBox GrupoCompra;
         private System.Windows.Forms.DateTimePicker txtFechaBusqueda;
-        private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtFecha;
         private System.Windows.Forms.Label label3;

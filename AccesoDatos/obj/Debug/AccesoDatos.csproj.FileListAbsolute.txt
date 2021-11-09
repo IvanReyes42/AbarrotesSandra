@@ -1,0 +1,11 @@
+C:\Users\Ivan Reyes Ortega\Desktop\abarrotessandra\AccesoDatos\obj\Debug\AccesoDatos.csproj.AssemblyReference.cache
+C:\Users\Ivan Reyes Ortega\Desktop\abarrotessandra\AccesoDatos\obj\Debug\AccesoDatos.csproj.CoreCompileInputs.cache
+C:\Users\Ivan Reyes Ortega\Desktop\abarrotessandra\AccesoDatos\bin\Debug\AccesoDatos.exe.config
+C:\Users\Ivan Reyes Ortega\Desktop\abarrotessandra\AccesoDatos\bin\Debug\AccesoDatos.exe
+C:\Users\Ivan Reyes Ortega\Desktop\abarrotessandra\AccesoDatos\bin\Debug\AccesoDatos.pdb
+C:\Users\Ivan Reyes Ortega\Desktop\abarrotessandra\AccesoDatos\bin\Debug\Entidades.exe
+C:\Users\Ivan Reyes Ortega\Desktop\abarrotessandra\AccesoDatos\bin\Debug\Entidades.pdb
+C:\Users\Ivan Reyes Ortega\Desktop\abarrotessandra\AccesoDatos\bin\Debug\Entidades.exe.config
+C:\Users\Ivan Reyes Ortega\Desktop\abarrotessandra\AccesoDatos\obj\Debug\AccesoDatos.csproj.CopyComplete
+C:\Users\Ivan Reyes Ortega\Desktop\abarrotessandra\AccesoDatos\obj\Debug\AccesoDatos.exe
+C:\Users\Ivan Reyes Ortega\Desktop\abarrotessandra\AccesoDatos\obj\Debug\AccesoDatos.pdb

@@ -33,6 +33,11 @@ namespace AbarrotesSandra_IR
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.pbVerContraseña = new System.Windows.Forms.PictureBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtConfContraseña = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtContraseña = new System.Windows.Forms.TextBox();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
@@ -52,16 +57,13 @@ namespace AbarrotesSandra_IR
             this.dgvUsuarios = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.txtBuscar = new System.Windows.Forms.TextBox();
-            this.txtContraseña = new System.Windows.Forms.TextBox();
-            this.txtConfContraseña = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.pbVerContraseña = new System.Windows.Forms.PictureBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbVerContraseña)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
             this.SuspendLayout();
             // 
             // pbCerrar
@@ -82,7 +84,7 @@ namespace AbarrotesSandra_IR
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(13, 20);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(97, 29);
+            this.label2.Size = new System.Drawing.Size(122, 35);
             this.label2.TabIndex = 13;
             this.label2.Text = "Usuarios";
             // 
@@ -97,6 +99,8 @@ namespace AbarrotesSandra_IR
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.pbVerContraseña);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.txtConfContraseña);
@@ -117,9 +121,52 @@ namespace AbarrotesSandra_IR
             this.groupBox1.Controls.Add(this.txtID);
             this.groupBox1.Location = new System.Drawing.Point(778, 144);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(488, 418);
+            this.groupBox1.Size = new System.Drawing.Size(488, 483);
             this.groupBox1.TabIndex = 27;
             this.groupBox1.TabStop = false;
+            // 
+            // pbVerContraseña
+            // 
+            this.pbVerContraseña.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbVerContraseña.Location = new System.Drawing.Point(462, 266);
+            this.pbVerContraseña.Name = "pbVerContraseña";
+            this.pbVerContraseña.Size = new System.Drawing.Size(20, 20);
+            this.pbVerContraseña.TabIndex = 28;
+            this.pbVerContraseña.TabStop = false;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(25, 300);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(82, 24);
+            this.label8.TabIndex = 32;
+            this.label8.Text = "Confirmar";
+            // 
+            // txtConfContraseña
+            // 
+            this.txtConfContraseña.Location = new System.Drawing.Point(111, 309);
+            this.txtConfContraseña.Name = "txtConfContraseña";
+            this.txtConfContraseña.PasswordChar = '*';
+            this.txtConfContraseña.Size = new System.Drawing.Size(345, 30);
+            this.txtConfContraseña.TabIndex = 31;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(25, 320);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(94, 24);
+            this.label6.TabIndex = 30;
+            this.label6.Text = "Contraseña";
+            // 
+            // txtContraseña
+            // 
+            this.txtContraseña.Location = new System.Drawing.Point(111, 263);
+            this.txtContraseña.Name = "txtContraseña";
+            this.txtContraseña.PasswordChar = '*';
+            this.txtContraseña.Size = new System.Drawing.Size(345, 30);
+            this.txtContraseña.TabIndex = 29;
             // 
             // btnGuardar
             // 
@@ -127,7 +174,7 @@ namespace AbarrotesSandra_IR
             this.btnGuardar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
-            this.btnGuardar.Location = new System.Drawing.Point(89, 354);
+            this.btnGuardar.Location = new System.Drawing.Point(89, 413);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(126, 40);
             this.btnGuardar.TabIndex = 28;
@@ -140,7 +187,7 @@ namespace AbarrotesSandra_IR
             this.btnCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.ForeColor = System.Drawing.Color.White;
-            this.btnCancelar.Location = new System.Drawing.Point(280, 354);
+            this.btnCancelar.Location = new System.Drawing.Point(280, 413);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(126, 40);
             this.btnCancelar.TabIndex = 27;
@@ -152,7 +199,7 @@ namespace AbarrotesSandra_IR
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(25, 266);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(76, 20);
+            this.label7.Size = new System.Drawing.Size(94, 24);
             this.label7.TabIndex = 25;
             this.label7.Text = "Contraseña";
             // 
@@ -161,7 +208,7 @@ namespace AbarrotesSandra_IR
             this.Email.AutoSize = true;
             this.Email.Location = new System.Drawing.Point(25, 219);
             this.Email.Name = "Email";
-            this.Email.Size = new System.Drawing.Size(42, 20);
+            this.Email.Size = new System.Drawing.Size(51, 24);
             this.Email.TabIndex = 23;
             this.Email.Text = "Email";
             // 
@@ -169,7 +216,7 @@ namespace AbarrotesSandra_IR
             // 
             this.txtEmail.Location = new System.Drawing.Point(111, 216);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(345, 26);
+            this.txtEmail.Size = new System.Drawing.Size(345, 30);
             this.txtEmail.TabIndex = 22;
             // 
             // lblcabntidad
@@ -177,7 +224,7 @@ namespace AbarrotesSandra_IR
             this.lblcabntidad.AutoSize = true;
             this.lblcabntidad.Location = new System.Drawing.Point(25, 173);
             this.lblcabntidad.Name = "lblcabntidad";
-            this.lblcabntidad.Size = new System.Drawing.Size(54, 20);
+            this.lblcabntidad.Size = new System.Drawing.Size(65, 24);
             this.lblcabntidad.TabIndex = 21;
             this.lblcabntidad.Text = "Usuario";
             // 
@@ -185,7 +232,7 @@ namespace AbarrotesSandra_IR
             // 
             this.txtUsuario.Location = new System.Drawing.Point(111, 170);
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(345, 26);
+            this.txtUsuario.Size = new System.Drawing.Size(345, 30);
             this.txtUsuario.TabIndex = 20;
             // 
             // label5
@@ -193,7 +240,7 @@ namespace AbarrotesSandra_IR
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(25, 126);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(66, 20);
+            this.label5.Size = new System.Drawing.Size(74, 24);
             this.label5.TabIndex = 19;
             this.label5.Text = "Apellidos";
             // 
@@ -201,7 +248,7 @@ namespace AbarrotesSandra_IR
             // 
             this.txtApellidos.Location = new System.Drawing.Point(111, 123);
             this.txtApellidos.Name = "txtApellidos";
-            this.txtApellidos.Size = new System.Drawing.Size(345, 26);
+            this.txtApellidos.Size = new System.Drawing.Size(345, 30);
             this.txtApellidos.TabIndex = 18;
             // 
             // label4
@@ -209,7 +256,7 @@ namespace AbarrotesSandra_IR
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(25, 80);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(57, 20);
+            this.label4.Size = new System.Drawing.Size(69, 24);
             this.label4.TabIndex = 17;
             this.label4.Text = "Nombre";
             // 
@@ -217,7 +264,7 @@ namespace AbarrotesSandra_IR
             // 
             this.txtNombre.Location = new System.Drawing.Point(111, 77);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(345, 26);
+            this.txtNombre.Size = new System.Drawing.Size(345, 30);
             this.txtNombre.TabIndex = 16;
             // 
             // label3
@@ -225,7 +272,7 @@ namespace AbarrotesSandra_IR
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(25, 36);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(21, 20);
+            this.label3.Size = new System.Drawing.Size(27, 24);
             this.label3.TabIndex = 15;
             this.label3.Text = "ID";
             // 
@@ -233,7 +280,7 @@ namespace AbarrotesSandra_IR
             // 
             this.txtID.Location = new System.Drawing.Point(111, 33);
             this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(345, 26);
+            this.txtID.Size = new System.Drawing.Size(345, 30);
             this.txtID.TabIndex = 14;
             // 
             // btnModificar
@@ -289,6 +336,7 @@ namespace AbarrotesSandra_IR
             this.dgvUsuarios.Name = "dgvUsuarios";
             this.dgvUsuarios.ReadOnly = true;
             this.dgvUsuarios.RowHeadersVisible = false;
+            this.dgvUsuarios.RowHeadersWidth = 51;
             this.dgvUsuarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvUsuarios.Size = new System.Drawing.Size(688, 418);
             this.dgvUsuarios.TabIndex = 22;
@@ -298,7 +346,7 @@ namespace AbarrotesSandra_IR
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(44, 98);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(99, 20);
+            this.label1.Size = new System.Drawing.Size(120, 24);
             this.label1.TabIndex = 21;
             this.label1.Text = "Buscar Usuario";
             // 
@@ -306,55 +354,29 @@ namespace AbarrotesSandra_IR
             // 
             this.txtBuscar.Location = new System.Drawing.Point(174, 95);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(562, 26);
+            this.txtBuscar.Size = new System.Drawing.Size(562, 30);
             this.txtBuscar.TabIndex = 20;
             // 
-            // txtContraseña
+            // comboBox1
             // 
-            this.txtContraseña.Location = new System.Drawing.Point(111, 263);
-            this.txtContraseña.Name = "txtContraseña";
-            this.txtContraseña.PasswordChar = '*';
-            this.txtContraseña.Size = new System.Drawing.Size(345, 26);
-            this.txtContraseña.TabIndex = 29;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(111, 358);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(345, 32);
+            this.comboBox1.TabIndex = 40;
             // 
-            // txtConfContraseña
+            // label10
             // 
-            this.txtConfContraseña.Location = new System.Drawing.Point(111, 309);
-            this.txtConfContraseña.Name = "txtConfContraseña";
-            this.txtConfContraseña.PasswordChar = '*';
-            this.txtConfContraseña.Size = new System.Drawing.Size(345, 26);
-            this.txtConfContraseña.TabIndex = 31;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(25, 320);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(76, 20);
-            this.label6.TabIndex = 30;
-            this.label6.Text = "Contraseña";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(25, 300);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(65, 20);
-            this.label8.TabIndex = 32;
-            this.label8.Text = "Confirmar";
-            // 
-            // pbVerContraseña
-            // 
-            this.pbVerContraseña.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbVerContraseña.Location = new System.Drawing.Point(462, 266);
-            this.pbVerContraseña.Name = "pbVerContraseña";
-            this.pbVerContraseña.Size = new System.Drawing.Size(20, 20);
-            this.pbVerContraseña.TabIndex = 28;
-            this.pbVerContraseña.TabStop = false;
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(21, 358);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(65, 24);
+            this.label10.TabIndex = 39;
+            this.label10.Text = "Estatus";
             // 
             // FrmUsuarios
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1310, 653);
@@ -379,8 +401,8 @@ namespace AbarrotesSandra_IR
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbVerContraseña)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -416,5 +438,7 @@ namespace AbarrotesSandra_IR
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtContraseña;
         private System.Windows.Forms.PictureBox pbVerContraseña;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label10;
     }
 }

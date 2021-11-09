@@ -29,7 +29,7 @@ namespace AbarrotesSandra_IR
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btnRegresar = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dgvProductos = new System.Windows.Forms.DataGridView();
@@ -40,21 +40,22 @@ namespace AbarrotesSandra_IR
             this.btnVender = new System.Windows.Forms.Button();
             this.dvgVenta = new System.Windows.Forms.DataGridView();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnBuscar = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnRegresar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dvgVenta)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox2
+            // btnRegresar
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(1247, 11);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(48, 48);
-            this.pictureBox2.TabIndex = 12;
-            this.pictureBox2.TabStop = false;
+            this.btnRegresar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRegresar.Location = new System.Drawing.Point(1247, 11);
+            this.btnRegresar.Name = "btnRegresar";
+            this.btnRegresar.Size = new System.Drawing.Size(48, 48);
+            this.btnRegresar.TabIndex = 12;
+            this.btnRegresar.TabStop = false;
+            this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
             // 
             // label2
             // 
@@ -107,9 +108,9 @@ namespace AbarrotesSandra_IR
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(188, 92);
+            this.textBox1.Location = new System.Drawing.Point(172, 92);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(261, 30);
+            this.textBox1.Size = new System.Drawing.Size(425, 30);
             this.textBox1.TabIndex = 14;
             // 
             // btnCorteDeCaja
@@ -183,19 +184,6 @@ namespace AbarrotesSandra_IR
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
             // 
-            // btnBuscar
-            // 
-            this.btnBuscar.BackColor = System.Drawing.Color.DimGray;
-            this.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscar.ForeColor = System.Drawing.Color.White;
-            this.btnBuscar.Location = new System.Drawing.Point(455, 87);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(142, 40);
-            this.btnBuscar.TabIndex = 21;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = false;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -213,7 +201,6 @@ namespace AbarrotesSandra_IR
             this.ClientSize = new System.Drawing.Size(1310, 686);
             this.ControlBox = false;
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.dvgVenta);
             this.Controls.Add(this.btnVender);
@@ -222,7 +209,7 @@ namespace AbarrotesSandra_IR
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.dgvProductos);
-            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.btnRegresar);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox1);
             this.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -231,7 +218,7 @@ namespace AbarrotesSandra_IR
             this.Name = "FrmPuntoDeVenta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmPuntoDeVenta";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnRegresar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dvgVenta)).EndInit();
@@ -242,7 +229,7 @@ namespace AbarrotesSandra_IR
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox btnRegresar;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.DataGridView dgvProductos;
@@ -253,7 +240,6 @@ namespace AbarrotesSandra_IR
         private System.Windows.Forms.Button btnVender;
         private System.Windows.Forms.DataGridView dvgVenta;
         private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Label label3;
     }
 }

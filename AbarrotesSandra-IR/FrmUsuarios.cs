@@ -19,6 +19,7 @@ namespace AbarrotesSandra_IR
 
         private void pbCerrar_Click(object sender, EventArgs e)
         {
+            FrmMenuPrincipal.op = 0;
             Close();
         }
     }

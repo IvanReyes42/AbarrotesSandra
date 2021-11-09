@@ -13,3 +13,30 @@ S:\Documentos\Archivos guardados de Visual Studio\repos\AbarrotesSandra-IR\Abarr
 S:\Documentos\Archivos guardados de Visual Studio\repos\AbarrotesSandra-IR\AbarrotesSandra-IR\obj\Debug\AbarrotesSandra_IR.FrmReportes.resources
 S:\Documentos\Archivos guardados de Visual Studio\repos\AbarrotesSandra-IR\AbarrotesSandra-IR\obj\Debug\AbarrotesSandra_IR.FrmUsuarios.resources
 S:\Documentos\Archivos guardados de Visual Studio\repos\AbarrotesSandra-IR\AbarrotesSandra-IR\obj\Debug\AbarrotesSandra_IR.FrmHorarios.resources
+C:\Users\Ivan Reyes Ortega\Desktop\abarrotessandra\AbarrotesSandra-IR\obj\Debug\Presentacion.csproj.AssemblyReference.cache
+C:\Users\Ivan Reyes Ortega\Desktop\abarrotessandra\AbarrotesSandra-IR\obj\Debug\AbarrotesSandra_IR.Form1.resources
+C:\Users\Ivan Reyes Ortega\Desktop\abarrotessandra\AbarrotesSandra-IR\obj\Debug\AbarrotesSandra_IR.FrmCategorias.resources
+C:\Users\Ivan Reyes Ortega\Desktop\abarrotessandra\AbarrotesSandra-IR\obj\Debug\AbarrotesSandra_IR.FrmCompras.resources
+C:\Users\Ivan Reyes Ortega\Desktop\abarrotessandra\AbarrotesSandra-IR\obj\Debug\AbarrotesSandra_IR.FrmHorarios.resources
+C:\Users\Ivan Reyes Ortega\Desktop\abarrotessandra\AbarrotesSandra-IR\obj\Debug\AbarrotesSandra_IR.FrmInicioSesion.resources
+C:\Users\Ivan Reyes Ortega\Desktop\abarrotessandra\AbarrotesSandra-IR\obj\Debug\AbarrotesSandra_IR.FrmInventario.resources
+C:\Users\Ivan Reyes Ortega\Desktop\abarrotessandra\AbarrotesSandra-IR\obj\Debug\AbarrotesSandra_IR.FrmMenuPrincipal.resources
+C:\Users\Ivan Reyes Ortega\Desktop\abarrotessandra\AbarrotesSandra-IR\obj\Debug\AbarrotesSandra_IR.FrmProveedores.resources
+C:\Users\Ivan Reyes Ortega\Desktop\abarrotessandra\AbarrotesSandra-IR\obj\Debug\AbarrotesSandra_IR.FrmPuntoDeVenta.resources
+C:\Users\Ivan Reyes Ortega\Desktop\abarrotessandra\AbarrotesSandra-IR\obj\Debug\AbarrotesSandra_IR.FrmReportes.resources
+C:\Users\Ivan Reyes Ortega\Desktop\abarrotessandra\AbarrotesSandra-IR\obj\Debug\AbarrotesSandra_IR.FrmUsuarios.resources
+C:\Users\Ivan Reyes Ortega\Desktop\abarrotessandra\AbarrotesSandra-IR\obj\Debug\AbarrotesSandra_IR.Properties.Resources.resources
+C:\Users\Ivan Reyes Ortega\Desktop\abarrotessandra\AbarrotesSandra-IR\obj\Debug\Presentacion.csproj.GenerateResource.cache
+C:\Users\Ivan Reyes Ortega\Desktop\abarrotessandra\AbarrotesSandra-IR\obj\Debug\Presentacion.csproj.CoreCompileInputs.cache
+C:\Users\Ivan Reyes Ortega\Desktop\abarrotessandra\AbarrotesSandra-IR\obj\Debug\AbarrotesSandra-IR.exe
+C:\Users\Ivan Reyes Ortega\Desktop\abarrotessandra\AbarrotesSandra-IR\obj\Debug\AbarrotesSandra-IR.pdb
+C:\Users\Ivan Reyes Ortega\Desktop\abarrotessandra\AbarrotesSandra-IR\bin\Debug\AbarrotesSandra-IR.exe.config
+C:\Users\Ivan Reyes Ortega\Desktop\abarrotessandra\AbarrotesSandra-IR\bin\Debug\AbarrotesSandra-IR.exe
+C:\Users\Ivan Reyes Ortega\Desktop\abarrotessandra\AbarrotesSandra-IR\bin\Debug\AbarrotesSandra-IR.pdb
+C:\Users\Ivan Reyes Ortega\Desktop\abarrotessandra\AbarrotesSandra-IR\bin\Debug\Entidades.exe
+C:\Users\Ivan Reyes Ortega\Desktop\abarrotessandra\AbarrotesSandra-IR\bin\Debug\Manejadores.exe
+C:\Users\Ivan Reyes Ortega\Desktop\abarrotessandra\AbarrotesSandra-IR\bin\Debug\Entidades.pdb
+C:\Users\Ivan Reyes Ortega\Desktop\abarrotessandra\AbarrotesSandra-IR\bin\Debug\Entidades.exe.config
+C:\Users\Ivan Reyes Ortega\Desktop\abarrotessandra\AbarrotesSandra-IR\bin\Debug\Manejadores.pdb
+C:\Users\Ivan Reyes Ortega\Desktop\abarrotessandra\AbarrotesSandra-IR\bin\Debug\Manejadores.exe.config
+C:\Users\Ivan Reyes Ortega\Desktop\abarrotessandra\AbarrotesSandra-IR\obj\Debug\Presentacion.csproj.CopyComplete

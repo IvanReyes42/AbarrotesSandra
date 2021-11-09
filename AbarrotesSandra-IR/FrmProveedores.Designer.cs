@@ -29,13 +29,12 @@ namespace AbarrotesSandra_IR
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btnRegresar = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.txtBuscar = new System.Windows.Forms.Button();
             this.GrupoProveedor = new System.Windows.Forms.GroupBox();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
@@ -55,20 +54,23 @@ namespace AbarrotesSandra_IR
             this.txtId = new System.Windows.Forms.TextBox();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
-            this.btnStatus = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.label10 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            ((System.ComponentModel.ISupportInitialize)(this.btnRegresar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.GrupoProveedor.SuspendLayout();
             this.SuspendLayout();
             // 
-            // pictureBox2
+            // btnRegresar
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(1250, 9);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(48, 48);
-            this.pictureBox2.TabIndex = 12;
-            this.pictureBox2.TabStop = false;
+            this.btnRegresar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRegresar.Location = new System.Drawing.Point(1250, 9);
+            this.btnRegresar.Name = "btnRegresar";
+            this.btnRegresar.Size = new System.Drawing.Size(48, 48);
+            this.btnRegresar.TabIndex = 12;
+            this.btnRegresar.TabStop = false;
+            this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
             // 
             // label2
             // 
@@ -123,24 +125,13 @@ namespace AbarrotesSandra_IR
             // 
             this.textBox1.Location = new System.Drawing.Point(208, 103);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(369, 30);
+            this.textBox1.Size = new System.Drawing.Size(542, 30);
             this.textBox1.TabIndex = 14;
-            // 
-            // txtBuscar
-            // 
-            this.txtBuscar.BackColor = System.Drawing.Color.DimGray;
-            this.txtBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.txtBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.txtBuscar.ForeColor = System.Drawing.Color.White;
-            this.txtBuscar.Location = new System.Drawing.Point(607, 103);
-            this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(126, 40);
-            this.txtBuscar.TabIndex = 16;
-            this.txtBuscar.Text = "Buscar";
-            this.txtBuscar.UseVisualStyleBackColor = false;
             // 
             // GrupoProveedor
             // 
+            this.GrupoProveedor.Controls.Add(this.comboBox1);
+            this.GrupoProveedor.Controls.Add(this.label10);
             this.GrupoProveedor.Controls.Add(this.btnCancelar);
             this.GrupoProveedor.Controls.Add(this.btnGuardar);
             this.GrupoProveedor.Controls.Add(this.label9);
@@ -159,7 +150,7 @@ namespace AbarrotesSandra_IR
             this.GrupoProveedor.Controls.Add(this.txtId);
             this.GrupoProveedor.Location = new System.Drawing.Point(802, 167);
             this.GrupoProveedor.Name = "GrupoProveedor";
-            this.GrupoProveedor.Size = new System.Drawing.Size(496, 468);
+            this.GrupoProveedor.Size = new System.Drawing.Size(496, 495);
             this.GrupoProveedor.TabIndex = 17;
             this.GrupoProveedor.TabStop = false;
             // 
@@ -169,7 +160,7 @@ namespace AbarrotesSandra_IR
             this.btnCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.ForeColor = System.Drawing.Color.White;
-            this.btnCancelar.Location = new System.Drawing.Point(332, 394);
+            this.btnCancelar.Location = new System.Drawing.Point(332, 433);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(126, 40);
             this.btnCancelar.TabIndex = 36;
@@ -182,7 +173,7 @@ namespace AbarrotesSandra_IR
             this.btnGuardar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
-            this.btnGuardar.Location = new System.Drawing.Point(153, 394);
+            this.btnGuardar.Location = new System.Drawing.Point(153, 433);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(126, 40);
             this.btnGuardar.TabIndex = 35;
@@ -327,35 +318,37 @@ namespace AbarrotesSandra_IR
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.UseVisualStyleBackColor = false;
             // 
-            // btnStatus
+            // label10
             // 
-            this.btnStatus.BackColor = System.Drawing.Color.DimGray;
-            this.btnStatus.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnStatus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStatus.ForeColor = System.Drawing.Color.White;
-            this.btnStatus.Location = new System.Drawing.Point(376, 581);
-            this.btnStatus.Name = "btnStatus";
-            this.btnStatus.Size = new System.Drawing.Size(162, 40);
-            this.btnStatus.TabIndex = 34;
-            this.btnStatus.Text = "Cambiar Estatus";
-            this.btnStatus.UseVisualStyleBackColor = false;
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(23, 388);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(65, 24);
+            this.label10.TabIndex = 37;
+            this.label10.Text = "Estatus";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(153, 388);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(305, 32);
+            this.comboBox1.TabIndex = 38;
             // 
             // FrmProveedores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1315, 677);
+            this.ClientSize = new System.Drawing.Size(1315, 693);
             this.ControlBox = false;
-            this.Controls.Add(this.btnStatus);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.GrupoProveedor);
-            this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.btnRegresar);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox1);
             this.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -364,9 +357,9 @@ namespace AbarrotesSandra_IR
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmProveedores";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmProveedores";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnRegresar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.GrupoProveedor.ResumeLayout(false);
@@ -378,13 +371,12 @@ namespace AbarrotesSandra_IR
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox btnRegresar;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button txtBuscar;
         private System.Windows.Forms.GroupBox GrupoProveedor;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtRazonSocial;
@@ -402,8 +394,9 @@ namespace AbarrotesSandra_IR
         private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button btnNuevo;
-        private System.Windows.Forms.Button btnStatus;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

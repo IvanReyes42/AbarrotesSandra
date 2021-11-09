@@ -63,7 +63,7 @@ namespace AbarrotesSandra_IR
             this.pictureBox1.BackColor = System.Drawing.Color.DimGray;
             this.pictureBox1.Location = new System.Drawing.Point(0, -1);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1313, 55);
+            this.pictureBox1.Size = new System.Drawing.Size(1551, 55);
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             // 
@@ -115,6 +115,7 @@ namespace AbarrotesSandra_IR
             this.btnVentas.Name = "btnVentas";
             this.btnVentas.Size = new System.Drawing.Size(83, 68);
             this.btnVentas.Text = "Punto de Venta";
+            this.btnVentas.ButtonClick += new System.EventHandler(this.btnVentas_ButtonClick);
             // 
             // btnCompras
             // 
@@ -125,6 +126,7 @@ namespace AbarrotesSandra_IR
             this.btnCompras.Name = "btnCompras";
             this.btnCompras.Size = new System.Drawing.Size(83, 68);
             this.btnCompras.Text = "Compras";
+            this.btnCompras.ButtonClick += new System.EventHandler(this.btnCompras_ButtonClick);
             // 
             // btnProveedores
             // 
@@ -135,6 +137,7 @@ namespace AbarrotesSandra_IR
             this.btnProveedores.Name = "btnProveedores";
             this.btnProveedores.Size = new System.Drawing.Size(83, 68);
             this.btnProveedores.Text = "Proveedores";
+            this.btnProveedores.ButtonClick += new System.EventHandler(this.btnProveedores_ButtonClick);
             // 
             // btnInventario
             // 
@@ -145,6 +148,7 @@ namespace AbarrotesSandra_IR
             this.btnInventario.Name = "btnInventario";
             this.btnInventario.Size = new System.Drawing.Size(83, 68);
             this.btnInventario.Text = "Inventario";
+            this.btnInventario.ButtonClick += new System.EventHandler(this.btnInventario_ButtonClick);
             // 
             // BtnUsuarios
             // 
@@ -155,6 +159,7 @@ namespace AbarrotesSandra_IR
             this.BtnUsuarios.Name = "BtnUsuarios";
             this.BtnUsuarios.Size = new System.Drawing.Size(83, 68);
             this.BtnUsuarios.Text = "Usuarios";
+            this.BtnUsuarios.ButtonClick += new System.EventHandler(this.BtnUsuarios_ButtonClick);
             // 
             // btnHorarios
             // 
@@ -165,6 +170,7 @@ namespace AbarrotesSandra_IR
             this.btnHorarios.Name = "btnHorarios";
             this.btnHorarios.Size = new System.Drawing.Size(83, 68);
             this.btnHorarios.Text = "toolStripSplitButton8";
+            this.btnHorarios.ButtonClick += new System.EventHandler(this.btnHorarios_ButtonClick);
             // 
             // bntSalir
             // 
@@ -175,20 +181,22 @@ namespace AbarrotesSandra_IR
             this.bntSalir.Name = "bntSalir";
             this.bntSalir.Size = new System.Drawing.Size(83, 68);
             this.bntSalir.Text = "Salir";
+            this.bntSalir.ButtonClick += new System.EventHandler(this.bntSalir_ButtonClick);
             // 
             // FrmMenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1314, 706);
+            this.ClientSize = new System.Drawing.Size(1550, 706);
             this.ControlBox = false;
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.statusStrip1);
             this.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.IsMdiContainer = true;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmMenuPrincipal";
