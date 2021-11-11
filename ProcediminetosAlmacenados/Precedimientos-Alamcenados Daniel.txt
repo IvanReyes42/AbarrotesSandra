@@ -1,0 +1,106 @@
+---------------------------Almacenar--------------------------
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE GuardarUsuarios 
+	@Nombre nvarchar(50),
+	@ApellidoPaterno nvarchar(50),
+	@ApellidoMaterno nvarchar(50),
+	@Usuario nvarchar(50),
+	@Email nvarchar(50),
+	@Telefono nvarchar(50),
+	@Rol nvarchar(50),
+	@Estatus nvarchar(50),
+	@Contrasena nvarchar(50),
+	@ObtenerID int OUT
+AS
+BEGIN
+	
+	SET NOCOUNT ON;
+
+	INSERT INTO Usuarios (Nombre, ApellidoPaterno, ApellidoMaterno, Telefono, Estatus) 
+	VALUES (@Nombre, @ApellidoPaterno, @ApellidoMaterno, @Telefono, @Estatus)
+
+	SET @ObtenerID = (SELECT IdUser FROM Usuarios WHERE Nombre=@Nombre AND ApellidoPaterno=@ApellidoPaterno AND ApellidoMaterno=@ApellidoMaterno)
+
+	INSERT INTO Empleados (FkIdUser, Usuario, Correo, Contraseña, Rol)
+	VALUES (@ObtenerID, @Usuario, @Email, ENCRYPTBYPASSPHRASE('Contraseña', @Contrasena), @Rol)
+END
+GO
+------------------------Modificar--------------------------------------------
+
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE PROCEDURE ModificarUsuarios
+	@ID int,
+	@Nombre nvarchar(50),
+	@ApellidoPaterno nvarchar(50),
+	@ApellidoMaterno nvarchar(50),
+	@Usuario nvarchar(50),
+	@Email nvarchar(50),
+	@Telefono nvarchar(50),
+	@Rol nvarchar(50),
+	@Estatus nvarchar(50)
+AS
+BEGIN
+
+	SET NOCOUNT ON;
+
+	UPDATE Usuarios SET Nombre=@Nombre, ApellidoPaterno=@ApellidoPaterno, @ApellidoMaterno=@ApellidoMaterno, Telefono=@Telefono, Estatus=@Estatus WHERE IdUser=@ID
+	UPDATE Empleados SET Usuario=@Usuario, Correo=@Email, Rol=@Rol WHERE FkIdUser=@ID
+END
+GO
+
+-----------------------------------ELIMINAR-------------------------------------------------------------------
+
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE PROCEDURE EliminarUsuarios
+	@ID int,
+	@ParametroSalida nvarchar(100) OUT
+AS
+
+IF EXISTS(SELECT * FROM TicketVenta WHERE FkIdUsuario=@ID)
+
+BEGIN
+	--PRINT ('No se puede eliminar al usuario con ID '+ @ID +', porque hay ventas asociadas a su ID.')--
+	SET @ParametroSalida = 'No se puede eliminar al usuario seleccionado, porque hay ventas asociadas a su ID.'
+	SELECT @ParametroSalida
+	RETURN
+END
+
+BEGIN
+	
+	SET NOCOUNT ON;
+
+    DELETE FROM Usuarios WHERE IdUser=@ID
+	DELETE FROM Empleados WHERE FkIdUser=@ID
+
+	SET @ParametroSalida = 'Se eliminó el usuario con ID '
+	SELECT @ParametroSalida
+END
+GO
+
+-------------------------------------------CONSULTAR-----------------------------------------------
+
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE PROCEDURE ConsultarUsuarios
+	@Usuario nvarchar(50)
+	
+AS
+BEGIN
+	
+	SELECT u.IdUser, u.Nombre, u.ApellidoPaterno, u.ApellidoMaterno, e.Usuario, e.Correo, u.Telefono, e.Rol, u.Estatus FROM Usuarios u, Empleados e WHERE u.IdUser=e.FkIdUser AND  e.Usuario LIKE'%'+@Usuario+'%'
+END
+GO

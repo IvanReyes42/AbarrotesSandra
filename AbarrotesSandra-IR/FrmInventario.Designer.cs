@@ -40,6 +40,8 @@ namespace AbarrotesSandra_IR
             this.btnCategoria = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cmbEstatus = new System.Windows.Forms.ComboBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.cmbCategoria = new System.Windows.Forms.ComboBox();
@@ -54,8 +56,8 @@ namespace AbarrotesSandra_IR
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label10 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtStockMinimo = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventario)).BeginInit();
@@ -108,6 +110,7 @@ namespace AbarrotesSandra_IR
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(562, 30);
             this.txtBuscar.TabIndex = 12;
+            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
             // dgvInventario
             // 
@@ -127,6 +130,7 @@ namespace AbarrotesSandra_IR
             this.dgvInventario.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvInventario.Size = new System.Drawing.Size(688, 418);
             this.dgvInventario.TabIndex = 14;
+            this.dgvInventario.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvInventario_CellClick);
             // 
             // btnNuevo
             // 
@@ -140,6 +144,7 @@ namespace AbarrotesSandra_IR
             this.btnNuevo.TabIndex = 15;
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.UseVisualStyleBackColor = false;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // btnReportes
             // 
@@ -181,10 +186,13 @@ namespace AbarrotesSandra_IR
             this.btnModificar.TabIndex = 18;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = false;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.label8);
+            this.groupBox1.Controls.Add(this.txtStockMinimo);
+            this.groupBox1.Controls.Add(this.cmbEstatus);
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.btnGuardar);
             this.groupBox1.Controls.Add(this.btnCancelar);
@@ -200,11 +208,32 @@ namespace AbarrotesSandra_IR
             this.groupBox1.Controls.Add(this.txtNombre);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.txtID);
+            this.groupBox1.Enabled = false;
             this.groupBox1.Location = new System.Drawing.Point(777, 149);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(488, 482);
             this.groupBox1.TabIndex = 19;
             this.groupBox1.TabStop = false;
+            // 
+            // cmbEstatus
+            // 
+            this.cmbEstatus.FormattingEnabled = true;
+            this.cmbEstatus.Items.AddRange(new object[] {
+            "Activo",
+            "Inactivo"});
+            this.cmbEstatus.Location = new System.Drawing.Point(109, 312);
+            this.cmbEstatus.Name = "cmbEstatus";
+            this.cmbEstatus.Size = new System.Drawing.Size(345, 32);
+            this.cmbEstatus.TabIndex = 40;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(23, 312);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(65, 24);
+            this.label10.TabIndex = 39;
+            this.label10.Text = "Estatus";
             // 
             // btnGuardar
             // 
@@ -218,6 +247,7 @@ namespace AbarrotesSandra_IR
             this.btnGuardar.TabIndex = 28;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // btnCancelar
             // 
@@ -231,11 +261,12 @@ namespace AbarrotesSandra_IR
             this.btnCancelar.TabIndex = 27;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // cmbCategoria
             // 
             this.cmbCategoria.FormattingEnabled = true;
-            this.cmbCategoria.Location = new System.Drawing.Point(111, 289);
+            this.cmbCategoria.Location = new System.Drawing.Point(109, 266);
             this.cmbCategoria.Name = "cmbCategoria";
             this.cmbCategoria.Size = new System.Drawing.Size(345, 32);
             this.cmbCategoria.TabIndex = 26;
@@ -243,7 +274,7 @@ namespace AbarrotesSandra_IR
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(25, 292);
+            this.label7.Location = new System.Drawing.Point(23, 269);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(80, 24);
             this.label7.TabIndex = 25;
@@ -252,7 +283,7 @@ namespace AbarrotesSandra_IR
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(25, 245);
+            this.label6.Location = new System.Drawing.Point(23, 222);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(57, 24);
             this.label6.TabIndex = 23;
@@ -260,7 +291,7 @@ namespace AbarrotesSandra_IR
             // 
             // txtPrecio
             // 
-            this.txtPrecio.Location = new System.Drawing.Point(111, 242);
+            this.txtPrecio.Location = new System.Drawing.Point(109, 219);
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(345, 30);
             this.txtPrecio.TabIndex = 22;
@@ -268,7 +299,7 @@ namespace AbarrotesSandra_IR
             // lblcabntidad
             // 
             this.lblcabntidad.AutoSize = true;
-            this.lblcabntidad.Location = new System.Drawing.Point(25, 199);
+            this.lblcabntidad.Location = new System.Drawing.Point(23, 176);
             this.lblcabntidad.Name = "lblcabntidad";
             this.lblcabntidad.Size = new System.Drawing.Size(75, 24);
             this.lblcabntidad.TabIndex = 21;
@@ -276,7 +307,8 @@ namespace AbarrotesSandra_IR
             // 
             // txtCantidad
             // 
-            this.txtCantidad.Location = new System.Drawing.Point(111, 196);
+            this.txtCantidad.Enabled = false;
+            this.txtCantidad.Location = new System.Drawing.Point(109, 173);
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(345, 30);
             this.txtCantidad.TabIndex = 20;
@@ -284,7 +316,7 @@ namespace AbarrotesSandra_IR
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(25, 152);
+            this.label5.Location = new System.Drawing.Point(23, 129);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(93, 24);
             this.label5.TabIndex = 19;
@@ -292,7 +324,7 @@ namespace AbarrotesSandra_IR
             // 
             // txtDescripcion
             // 
-            this.txtDescripcion.Location = new System.Drawing.Point(111, 149);
+            this.txtDescripcion.Location = new System.Drawing.Point(109, 126);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(345, 30);
             this.txtDescripcion.TabIndex = 18;
@@ -300,7 +332,7 @@ namespace AbarrotesSandra_IR
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(25, 106);
+            this.label4.Location = new System.Drawing.Point(23, 83);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(69, 24);
             this.label4.TabIndex = 17;
@@ -308,7 +340,7 @@ namespace AbarrotesSandra_IR
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(111, 103);
+            this.txtNombre.Location = new System.Drawing.Point(109, 80);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(345, 30);
             this.txtNombre.TabIndex = 16;
@@ -316,7 +348,7 @@ namespace AbarrotesSandra_IR
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(25, 62);
+            this.label3.Location = new System.Drawing.Point(23, 39);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(27, 24);
             this.label3.TabIndex = 15;
@@ -324,27 +356,27 @@ namespace AbarrotesSandra_IR
             // 
             // txtID
             // 
-            this.txtID.Location = new System.Drawing.Point(111, 59);
+            this.txtID.Enabled = false;
+            this.txtID.Location = new System.Drawing.Point(109, 36);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(345, 30);
             this.txtID.TabIndex = 14;
             // 
-            // comboBox1
+            // label8
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(111, 335);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(349, 32);
-            this.comboBox1.TabIndex = 40;
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(28, 345);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(64, 48);
+            this.label8.TabIndex = 42;
+            this.label8.Text = "Stock \r\nMinimo";
             // 
-            // label10
+            // txtStockMinimo
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(25, 335);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(65, 24);
-            this.label10.TabIndex = 39;
-            this.label10.Text = "Estatus";
+            this.txtStockMinimo.Location = new System.Drawing.Point(109, 363);
+            this.txtStockMinimo.Name = "txtStockMinimo";
+            this.txtStockMinimo.Size = new System.Drawing.Size(345, 30);
+            this.txtStockMinimo.TabIndex = 41;
             // 
             // FrmInventario
             // 
@@ -372,6 +404,7 @@ namespace AbarrotesSandra_IR
             this.Name = "FrmInventario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmInventario";
+            this.Load += new System.EventHandler(this.FrmInventario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbCerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventario)).EndInit();
@@ -409,7 +442,9 @@ namespace AbarrotesSandra_IR
         private System.Windows.Forms.ComboBox cmbCategoria;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbEstatus;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txtStockMinimo;
     }
 }

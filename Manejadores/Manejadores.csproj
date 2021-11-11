@@ -46,6 +46,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ManejadorCategorias.cs" />
+    <Compile Include="ManejadorProductos.cs" />
     <Compile Include="ManejadorUsuarios.cs" />
     <Compile Include="Program.cs" />
   </ItemGroup>

@@ -11,3 +11,4 @@ S:\Documentos\7mo Semestre\Ingenieria de requerimientos\Parcial 3\abarrotessandr
 S:\Documentos\7mo Semestre\Ingenieria de requerimientos\Parcial 3\abarrotessandra\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
 S:\Documentos\7mo Semestre\Ingenieria de requerimientos\Parcial 3\abarrotessandra\Entidades\obj\Debug\Entidades.exe
 S:\Documentos\7mo Semestre\Ingenieria de requerimientos\Parcial 3\abarrotessandra\Entidades\obj\Debug\Entidades.pdb
+C:\Users\Ivan Reyes Ortega\Desktop\abarrotessandra\Entidades\obj\Debug\Entidades.csproj.AssemblyReference.cache

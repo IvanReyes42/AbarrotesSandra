@@ -70,3 +70,6 @@ S:\Documentos\7mo Semestre\Ingenieria de requerimientos\Parcial 3\abarrotessandr
 S:\Documentos\7mo Semestre\Ingenieria de requerimientos\Parcial 3\abarrotessandra\AbarrotesSandra-IR\bin\Debug\AccesoDatos.pdb
 S:\Documentos\7mo Semestre\Ingenieria de requerimientos\Parcial 3\abarrotessandra\AbarrotesSandra-IR\bin\Debug\AccesoDatos.exe.config
 S:\Documentos\7mo Semestre\Ingenieria de requerimientos\Parcial 3\abarrotessandra\AbarrotesSandra-IR\obj\Debug\Presentacion.csproj.CopyComplete
+C:\Users\Ivan Reyes Ortega\Desktop\abarrotessandra\AbarrotesSandra-IR\bin\Debug\AccesoDatos.exe
+C:\Users\Ivan Reyes Ortega\Desktop\abarrotessandra\AbarrotesSandra-IR\bin\Debug\AccesoDatos.pdb
+C:\Users\Ivan Reyes Ortega\Desktop\abarrotessandra\AbarrotesSandra-IR\bin\Debug\AccesoDatos.exe.config

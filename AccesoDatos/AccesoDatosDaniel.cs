@@ -11,7 +11,8 @@ namespace AccesoDatos
         public bool GuardarUsuarios(EntidadUsuarios eu)
         {
             var conexion = new SqlConnection
-             ("data source=DANIELHP; Initial Catalog=AbarrotesSandra; User ID=sa; Password=Knj89%36L154ÑvR;");
+              //("data source=DANIELHP; Initial Catalog=AbarrotesSandra; User ID=sa; Password=Knj89%36L154ÑvR;");
+              ("data source=IVANREYESPC\\IVANREYES; Initial Catalog=Abarrotessandra; User ID=sa; Password=LaVacaLola42");
             try
             {
                 var insertar = new SqlCommand("EXEC GuardarUsuarios '" + eu.Nombre + "', '" + eu.ApellidoP + "', '" + eu.ApellidoM + "', '" + eu.Usuario + "'," +
@@ -32,7 +33,8 @@ namespace AccesoDatos
         public bool ModificarUsuarios(EntidadUsuarios eu)
         {
             var conexion = new SqlConnection
-             ("data source=DANIELHP; Initial Catalog=AbarrotesSandra; User ID=sa; Password=Knj89%36L154ÑvR;");
+              //("data source=DANIELHP; Initial Catalog=AbarrotesSandra; User ID=sa; Password=Knj89%36L154ÑvR;");
+              ("data source=IVANREYESPC\\IVANREYES; Initial Catalog=Abarrotessandra; User ID=sa; Password=LaVacaLola42");
             try
             {
                 var insertar = new SqlCommand("EXEC ModificarUsuarios '" + eu.ID + "','" + eu.Nombre + "', '" + eu.ApellidoP + "', '" + eu.ApellidoM + "', '" + eu.Usuario + "'," +
@@ -53,7 +55,8 @@ namespace AccesoDatos
         public string EliminarUsuarios(EntidadUsuarios eu)
         {
             var conexion = new SqlConnection
-             ("data source=DANIELHP; Initial Catalog=AbarrotesSandra; User ID=sa; Password=Knj89%36L154ÑvR;");
+            // ("data source=DANIELHP; Initial Catalog=AbarrotesSandra; User ID=sa; Password=Knj89%36L154ÑvR;");
+             ("data source=IVANREYESPC\\IVANREYES; Initial Catalog=Abarrotessandra; User ID=sa; Password=LaVacaLola42");
             try
             {
                 var insertar = new SqlCommand("EXEC EliminarUsuarios '" + eu.ID + "', ''", conexion);
@@ -73,7 +76,8 @@ namespace AccesoDatos
         public DataSet ConsultarUsuarios(string usuario)
         {
             var conexion = new SqlConnection
-             ("data source=DANIELHP; Initial Catalog=AbarrotesSandra; User ID=sa; Password=Knj89%36L154ÑvR;");
+              //("data source=DANIELHP; Initial Catalog=AbarrotesSandra; User ID=sa; Password=Knj89%36L154ÑvR;");
+              ("data source=IVANREYESPC\\IVANREYES; Initial Catalog=Abarrotessandra; User ID=sa; Password=LaVacaLola42");
 
             var conjunto = new DataSet();
 

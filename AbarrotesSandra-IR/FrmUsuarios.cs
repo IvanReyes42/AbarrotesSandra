@@ -110,8 +110,11 @@ namespace AbarrotesSandra_IR
                 txtUsuario.Text = eu.Usuario;
                 txtEmail.Text = eu.Email;
                 txtTelefono.Text = eu.Telefono;
-                cmbRol.SelectedItem = eu.Rol;
-                cmbEstatus.SelectedItem = eu.Estatus;
+
+                int indexrol = cmbRol.FindString(eu.Rol);
+                int indexes = cmbEstatus.FindString(eu.Estatus);
+                cmbRol.SelectedIndex = indexrol;
+                cmbEstatus.SelectedIndex = indexes;
             }
             else
             {
