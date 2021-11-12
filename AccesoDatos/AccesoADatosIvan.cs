@@ -127,5 +127,77 @@ namespace AccesoDatos
                 return false;
             }
         }
+
+        //CRUD Compras
+        public DataSet ConsultarCompras(string nombre, string fecha)
+        {
+            var Conjunto = new DataSet();
+            try
+            {
+                var Consultar = new SqlDataAdapter("EXEC MostrarCompras'" + nombre + "','"+fecha+"'", Conexion);
+
+                Conexion.Open();
+                Consultar.Fill(Conjunto, "Compras");
+                Conexion.Close();
+                return Conjunto;
+            }
+            catch (Exception ex)
+            {
+                Conexion.Close();
+                return Conjunto;
+            }
+        }
+        public DataSet LlenarComboProveedor()
+        {
+            var Conjunto = new DataSet();
+            try
+            {
+                var Consultar = new SqlDataAdapter("EXEC LlenarComboProveedor", Conexion);
+
+                Conexion.Open();
+                Consultar.Fill(Conjunto, "Proveedores");
+                Conexion.Close();
+                return Conjunto;
+            }
+            catch (Exception ex)
+            {
+                Conexion.Close();
+                return Conjunto;
+            }
+        }
+        public bool GuardarCompra(Compras c)
+        {
+            try
+            {
+                var Insertar = new SqlCommand("EXEC GuardarCompras'" +
+                    c.Fecha + "','" +c.FkIdInventario + "','" + c.FkIdProveedor + "','" + c.Cantidad + "','" + c.Total + "'", Conexion);
+                Conexion.Open();
+                Insertar.ExecuteNonQuery();
+                Conexion.Close();
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+        public bool ModificarCompras(Compras c,double cantidadactual)
+        {
+            try
+            {
+                var Insertar = new SqlCommand("EXEC ModificarCompra'" +
+                    c.IdCompras+"','"+c.Fecha + "','" + c.FkIdInventario + "','" + c.FkIdProveedor + "','"+cantidadactual+"','" + c.Cantidad + "','" + c.Total + "'", Conexion);
+                Conexion.Open();
+                Insertar.ExecuteNonQuery();
+                Conexion.Close();
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+        //CRUD Punto de Venta
+
     }
 }

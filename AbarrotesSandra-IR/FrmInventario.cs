@@ -47,6 +47,7 @@ namespace AbarrotesSandra_IR
             Botonera(false);
             groupBox1.Enabled = true;
             Id = 0;
+            Limpiar();
             
 
         }
@@ -114,11 +115,11 @@ namespace AbarrotesSandra_IR
                 pr.Precio = double.Parse(txtPrecio.Text);
                 pr.Estatus = cmbEstatus.Text;
                 pr.FkIdCategoria = int.Parse(cmbCategoria.SelectedValue.ToString());
-                pr.Cantidad = double.Parse(txtCantidad.Text);
+               
                 pr.StockMinimo = double.Parse(txtStockMinimo.Text);
                 if (Id==0)
                 {
-                    
+                    pr.Cantidad = 0;
                     if (mp.AgregarProductos(pr))
                     {
                         Limpiar();
@@ -136,7 +137,8 @@ namespace AbarrotesSandra_IR
                 else if(Id >0)
                 {
                     pr.IdProducto = Id;
-                    if(mp.ModificarProductos(pr))
+                    pr.Cantidad = double.Parse(txtCantidad.Text);
+                    if (mp.ModificarProductos(pr))
                     {
                         Limpiar();
                         LlenarData("");
@@ -165,7 +167,7 @@ namespace AbarrotesSandra_IR
             Categoria = dgvInventario.Rows[fila].Cells[5].Value.ToString();
             p.Estatus = dgvInventario.Rows[fila].Cells[6].Value.ToString();
             p.StockMinimo = double.Parse(dgvInventario.Rows[fila].Cells[0].Value.ToString());
-
+            LlenarDatos(Categoria);
             Id = p.IdProducto;
             
         }
@@ -183,6 +185,7 @@ namespace AbarrotesSandra_IR
                 cmbCategoria.SelectedIndex = indexc;
                 int indexe = cmbEstatus.FindString(p.Estatus);
                 cmbEstatus.SelectedIndex = indexe;
+                
             }
             catch (Exception)
             {

@@ -37,6 +37,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Categorias.cs" />
+    <Compile Include="Compras.cs" />
     <Compile Include="EntidadUsuarios.cs" />
     <Compile Include="Productos.cs" />
     <Compile Include="Program.cs" />

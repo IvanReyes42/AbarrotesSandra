@@ -33,8 +33,8 @@ namespace AbarrotesSandra_IR
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.txtBusqueda = new System.Windows.Forms.TextBox();
+            this.dvgCompras = new System.Windows.Forms.DataGridView();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.GrupoCompra = new System.Windows.Forms.GroupBox();
@@ -49,13 +49,13 @@ namespace AbarrotesSandra_IR
             this.label5 = new System.Windows.Forms.Label();
             this.cmbProductos = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtFecha = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtId = new System.Windows.Forms.TextBox();
             this.txtFechaBusqueda = new System.Windows.Forms.DateTimePicker();
+            this.txtFecha = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.btnRegresar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dvgCompras)).BeginInit();
             this.GrupoCompra.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -99,31 +99,34 @@ namespace AbarrotesSandra_IR
             this.label1.TabIndex = 14;
             this.label1.Text = "Buscar Producto";
             // 
-            // textBox1
+            // txtBusqueda
             // 
-            this.textBox1.Location = new System.Drawing.Point(188, 97);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(379, 30);
-            this.textBox1.TabIndex = 13;
+            this.txtBusqueda.Location = new System.Drawing.Point(188, 97);
+            this.txtBusqueda.Name = "txtBusqueda";
+            this.txtBusqueda.Size = new System.Drawing.Size(379, 30);
+            this.txtBusqueda.TabIndex = 13;
+            this.txtBusqueda.TextChanged += new System.EventHandler(this.txtBusqueda_TextChanged);
+            this.txtBusqueda.DoubleClick += new System.EventHandler(this.txtBusqueda_DoubleClick);
             // 
-            // dataGridView1
+            // dvgCompras
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AllowUserToResizeRows = false;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.DimGray;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.GridColor = System.Drawing.Color.White;
-            this.dataGridView1.Location = new System.Drawing.Point(44, 151);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(738, 393);
-            this.dataGridView1.TabIndex = 15;
+            this.dvgCompras.AllowUserToAddRows = false;
+            this.dvgCompras.AllowUserToDeleteRows = false;
+            this.dvgCompras.AllowUserToResizeRows = false;
+            this.dvgCompras.BackgroundColor = System.Drawing.Color.DimGray;
+            this.dvgCompras.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dvgCompras.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dvgCompras.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dvgCompras.GridColor = System.Drawing.Color.White;
+            this.dvgCompras.Location = new System.Drawing.Point(44, 151);
+            this.dvgCompras.Name = "dvgCompras";
+            this.dvgCompras.ReadOnly = true;
+            this.dvgCompras.RowHeadersVisible = false;
+            this.dvgCompras.RowHeadersWidth = 51;
+            this.dvgCompras.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dvgCompras.Size = new System.Drawing.Size(738, 393);
+            this.dvgCompras.TabIndex = 15;
+            this.dvgCompras.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvgCompras_CellClick);
             // 
             // btnNuevo
             // 
@@ -137,6 +140,7 @@ namespace AbarrotesSandra_IR
             this.btnNuevo.TabIndex = 16;
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.UseVisualStyleBackColor = false;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // btnModificar
             // 
@@ -150,9 +154,11 @@ namespace AbarrotesSandra_IR
             this.btnModificar.TabIndex = 17;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = false;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // GrupoCompra
             // 
+            this.GrupoCompra.Controls.Add(this.txtFecha);
             this.GrupoCompra.Controls.Add(this.btnCancelar);
             this.GrupoCompra.Controls.Add(this.label8);
             this.GrupoCompra.Controls.Add(this.btnGuardar);
@@ -164,9 +170,9 @@ namespace AbarrotesSandra_IR
             this.GrupoCompra.Controls.Add(this.label5);
             this.GrupoCompra.Controls.Add(this.cmbProductos);
             this.GrupoCompra.Controls.Add(this.label4);
-            this.GrupoCompra.Controls.Add(this.txtFecha);
             this.GrupoCompra.Controls.Add(this.label3);
             this.GrupoCompra.Controls.Add(this.txtId);
+            this.GrupoCompra.Enabled = false;
             this.GrupoCompra.Location = new System.Drawing.Point(836, 151);
             this.GrupoCompra.Name = "GrupoCompra";
             this.GrupoCompra.Size = new System.Drawing.Size(424, 479);
@@ -185,6 +191,7 @@ namespace AbarrotesSandra_IR
             this.btnCancelar.TabIndex = 21;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // label8
             // 
@@ -207,6 +214,7 @@ namespace AbarrotesSandra_IR
             this.btnGuardar.TabIndex = 20;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // txtTotal
             // 
@@ -274,13 +282,6 @@ namespace AbarrotesSandra_IR
             this.label4.TabIndex = 23;
             this.label4.Text = "Fecha";
             // 
-            // txtFecha
-            // 
-            this.txtFecha.Location = new System.Drawing.Point(113, 94);
-            this.txtFecha.Name = "txtFecha";
-            this.txtFecha.Size = new System.Drawing.Size(285, 30);
-            this.txtFecha.TabIndex = 22;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -292,6 +293,7 @@ namespace AbarrotesSandra_IR
             // 
             // txtId
             // 
+            this.txtId.Enabled = false;
             this.txtId.Location = new System.Drawing.Point(113, 43);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(285, 30);
@@ -305,6 +307,16 @@ namespace AbarrotesSandra_IR
             this.txtFechaBusqueda.Name = "txtFechaBusqueda";
             this.txtFechaBusqueda.Size = new System.Drawing.Size(209, 30);
             this.txtFechaBusqueda.TabIndex = 9;
+            this.txtFechaBusqueda.ValueChanged += new System.EventHandler(this.txtFechaBusqueda_ValueChanged);
+            // 
+            // txtFecha
+            // 
+            this.txtFecha.CustomFormat = "yyyy-MM-dd";
+            this.txtFecha.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.txtFecha.Location = new System.Drawing.Point(113, 92);
+            this.txtFecha.Name = "txtFecha";
+            this.txtFecha.Size = new System.Drawing.Size(285, 30);
+            this.txtFecha.TabIndex = 19;
             // 
             // FrmCompras
             // 
@@ -317,9 +329,9 @@ namespace AbarrotesSandra_IR
             this.Controls.Add(this.GrupoCompra);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnNuevo);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dvgCompras);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtBusqueda);
             this.Controls.Add(this.btnRegresar);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox1);
@@ -331,9 +343,10 @@ namespace AbarrotesSandra_IR
             this.Name = "FrmCompras";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmCompras";
+            this.Load += new System.EventHandler(this.FrmCompras_Load);
             ((System.ComponentModel.ISupportInitialize)(this.btnRegresar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dvgCompras)).EndInit();
             this.GrupoCompra.ResumeLayout(false);
             this.GrupoCompra.PerformLayout();
             this.ResumeLayout(false);
@@ -347,14 +360,13 @@ namespace AbarrotesSandra_IR
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TextBox txtBusqueda;
+        private System.Windows.Forms.DataGridView dvgCompras;
         private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.GroupBox GrupoCompra;
         private System.Windows.Forms.DateTimePicker txtFechaBusqueda;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtFecha;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.Button btnCancelar;
@@ -367,5 +379,6 @@ namespace AbarrotesSandra_IR
         private System.Windows.Forms.ComboBox cmbProveedores;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox cmbProductos;
+        private System.Windows.Forms.DateTimePicker txtFecha;
     }
 }
