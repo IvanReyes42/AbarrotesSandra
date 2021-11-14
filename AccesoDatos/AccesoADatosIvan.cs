@@ -197,7 +197,26 @@ namespace AccesoDatos
                 return false;
             }
         }
-        //CRUD Punto de Venta
+        //Login
+        public DataTable Login()
+        {
+            var Conjunto = new DataTable();
+            try
+            {
+                var Consultar = new SqlCommand("EXEC Login", Conexion);
+
+                Conexion.Open();
+                var da = new SqlDataAdapter(Consultar);
+                da.Fill(Conjunto);
+                Conexion.Close();
+                return Conjunto;
+            }
+            catch (Exception ex)
+            {
+                Conexion.Close();
+                return Conjunto;
+            }
+        }
 
     }
 }

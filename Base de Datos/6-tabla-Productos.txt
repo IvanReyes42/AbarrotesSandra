@@ -28,3 +28,4 @@ GO
 
 ALTER TABLE [dbo].[Productos] CHECK CONSTRAINT [FK_Productos_Categorias]
 GO
+

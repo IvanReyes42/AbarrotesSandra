@@ -93,7 +93,7 @@ namespace AbarrotesSandra_IR
 
         private void bntSalir_ButtonClick(object sender, EventArgs e)
         {
-            Application.Exit();
+            Close();
         }
 
         
