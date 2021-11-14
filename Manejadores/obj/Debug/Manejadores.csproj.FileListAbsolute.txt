@@ -26,3 +26,6 @@ S:\Documentos\7mo Semestre\Ingenieria de requerimientos\Parcial 3\abarrotessandr
 S:\Documentos\7mo Semestre\Ingenieria de requerimientos\Parcial 3\abarrotessandra\Manejadores\obj\Debug\Manejadores.csproj.CopyComplete
 S:\Documentos\7mo Semestre\Ingenieria de requerimientos\Parcial 3\abarrotessandra\Manejadores\obj\Debug\Manejadores.exe
 S:\Documentos\7mo Semestre\Ingenieria de requerimientos\Parcial 3\abarrotessandra\Manejadores\obj\Debug\Manejadores.pdb
+C:\Users\Ivan Reyes Ortega\Desktop\abarrotessandra\Manejadores\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Ivan Reyes Ortega\Desktop\abarrotessandra\Manejadores\bin\Debug\itextsharp.dll
+C:\Users\Ivan Reyes Ortega\Desktop\abarrotessandra\Manejadores\bin\Debug\itextsharp.xml

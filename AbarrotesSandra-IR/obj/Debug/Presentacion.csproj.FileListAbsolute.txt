@@ -73,3 +73,6 @@ S:\Documentos\7mo Semestre\Ingenieria de requerimientos\Parcial 3\abarrotessandr
 C:\Users\Ivan Reyes Ortega\Desktop\abarrotessandra\AbarrotesSandra-IR\bin\Debug\AccesoDatos.exe
 C:\Users\Ivan Reyes Ortega\Desktop\abarrotessandra\AbarrotesSandra-IR\bin\Debug\AccesoDatos.pdb
 C:\Users\Ivan Reyes Ortega\Desktop\abarrotessandra\AbarrotesSandra-IR\bin\Debug\AccesoDatos.exe.config
+C:\Users\Ivan Reyes Ortega\Desktop\abarrotessandra\AbarrotesSandra-IR\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Ivan Reyes Ortega\Desktop\abarrotessandra\AbarrotesSandra-IR\bin\Debug\itextsharp.dll
+C:\Users\Ivan Reyes Ortega\Desktop\abarrotessandra\AbarrotesSandra-IR\bin\Debug\itextsharp.xml

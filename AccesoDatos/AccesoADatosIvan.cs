@@ -217,6 +217,60 @@ namespace AccesoDatos
                 return Conjunto;
             }
         }
+        //Punto de Venta
+        public DataSet ListarProductos(string Nombre)
+        {
+            var Conjunto = new DataSet();
+            try
+            {
+                var Consultar = new SqlDataAdapter("EXEC ListarProductos'"+Nombre+"'", Conexion);
 
+                Conexion.Open();
+                Consultar.Fill(Conjunto, "Productos");
+                Conexion.Close();
+                return Conjunto;
+            }
+            catch (Exception ex)
+            {
+                Conexion.Close();
+                return Conjunto;
+            }
+        }
+        public bool GuardarVenta(TicketVenta t, ListaProductos lp,int opcion)
+        {
+            try
+            {
+                var Insertar = new SqlCommand("EXEC GuardarVenta'" +
+                    t.Fecha + "','" + t.Total + "','" + t.FkIdUsuario + "','','" + lp.IdProducto + "','" + lp.Cantidad + "','" +lp.SubTotal + "','"+opcion+"'", Conexion);
+                Conexion.Open();
+                Insertar.ExecuteNonQuery();
+                Conexion.Close();
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
+        public DataTable CorteDeCaja(int Iduser, string fecha)
+        {
+            var Conjunto = new DataTable();
+            try
+            {
+                var Consultar = new SqlCommand("EXEC CorteDeCaja'"+Iduser.ToString()+"','"+fecha+"'", Conexion);
+
+                Conexion.Open();
+                var da = new SqlDataAdapter(Consultar);
+                da.Fill(Conjunto);
+                Conexion.Close();
+                return Conjunto;
+            }
+            catch (Exception ex)
+            {
+                Conexion.Close();
+                return Conjunto;
+            }
+        }
     }
 }

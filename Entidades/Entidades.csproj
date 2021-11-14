@@ -39,9 +39,11 @@
     <Compile Include="Categorias.cs" />
     <Compile Include="Compras.cs" />
     <Compile Include="EntidadUsuarios.cs" />
+    <Compile Include="ListaProductos.cs" />
     <Compile Include="Login.cs" />
     <Compile Include="Productos.cs" />
     <Compile Include="Program.cs" />
+    <Compile Include="TicketVenta.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
