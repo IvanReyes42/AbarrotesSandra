@@ -1,0 +1,88 @@
+-------------------------------------------CONSULTAR GASTOS-----------------------------------------------
+
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE PROCEDURE ConsultarGastos
+	@FechaInicio date,
+	@FechaFin date
+	
+AS
+BEGIN
+	
+	SELECT p.Nombre AS "Producto", SUM(c.Total) AS "Gasto" FROM Productos p, Compras c WHERE p.IdProducto=c.FkIdProducto AND c.Fecha BETWEEN @FechaInicio AND @FechaFin GROUP BY p.Nombre
+END
+GO
+
+-------------------------------------------CONSULTAR TOTAL GASTOS-----------------------------------------------
+
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE PROCEDURE ConsultarTotalGastos
+	@FechaInicio date,
+	@FechaFin date
+	
+AS
+BEGIN
+	
+	SELECT SUM(Total) AS "Total" FROM Compras WHERE Fecha BETWEEN @FechaInicio AND @FechaFin 
+END
+GO
+
+-------------------------------------------CONSULTAR VENTAS-----------------------------------------------
+
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE PROCEDURE ConsultarVentas
+	@FechaInicio date,
+	@FechaFin date
+	
+AS
+BEGIN
+	
+	SELECT p.Nombre AS "Producto", SUM(dv.Subtotal) AS "Total" FROM Productos p, DetallesVentas dv, TicketVenta tv WHERE p.IdProducto=dv.FkIdProducto AND dv.FkIdVenta=tv.IdVenta AND tv.Fecha BETWEEN @FechaInicio AND @FechaFin GROUP BY p.Nombre
+END
+GO
+
+-------------------------------------------CONSULTAR TOTAL VENTAS-----------------------------------------------
+
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE PROCEDURE ConsultarTotalVentas
+	@FechaInicio date,
+	@FechaFin date
+	
+AS
+BEGIN
+	
+	SELECT SUM(dv.Subtotal) AS "Total" FROM DetallesVentas dv, TicketVenta tv WHERE dv.FkIdVenta=tv.IdVenta AND tv.Fecha BETWEEN @FechaInicio AND @FechaFin 
+END
+GO
+
+-------------------------------------------CONSULTAR INVETARIO-----------------------------------------------
+
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE PROCEDURE ConsultarInventario
+	
+AS
+BEGIN
+	
+	SELECT p.Nombre AS "Producto", i.CantidadExistente AS "Cantidad Existente" FROM Productos p, Inventario i WHERE p.IdProducto=i.FkIdProducto GROUP BY p.Nombre, i.CantidadExistente
+END
+GO
+

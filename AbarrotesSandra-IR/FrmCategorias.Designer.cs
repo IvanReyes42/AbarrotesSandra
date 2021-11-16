@@ -58,7 +58,7 @@ namespace AbarrotesSandra_IR
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(14, 20);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(144, 35);
+            this.label2.Size = new System.Drawing.Size(115, 29);
             this.label2.TabIndex = 12;
             this.label2.Text = "Categorias";
             // 
@@ -96,7 +96,7 @@ namespace AbarrotesSandra_IR
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(47, 102);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(137, 24);
+            this.label1.Size = new System.Drawing.Size(111, 20);
             this.label1.TabIndex = 16;
             this.label1.Text = "Buscar Categoría";
             // 
@@ -104,7 +104,7 @@ namespace AbarrotesSandra_IR
             // 
             this.txtBuscar.Location = new System.Drawing.Point(177, 99);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(369, 30);
+            this.txtBuscar.Size = new System.Drawing.Size(369, 26);
             this.txtBuscar.TabIndex = 15;
             this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
@@ -185,7 +185,7 @@ namespace AbarrotesSandra_IR
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(25, 106);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(69, 24);
+            this.label4.Size = new System.Drawing.Size(57, 20);
             this.label4.TabIndex = 17;
             this.label4.Text = "Nombre";
             // 
@@ -193,7 +193,7 @@ namespace AbarrotesSandra_IR
             // 
             this.txtNombre.Location = new System.Drawing.Point(111, 103);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(245, 30);
+            this.txtNombre.Size = new System.Drawing.Size(245, 26);
             this.txtNombre.TabIndex = 16;
             // 
             // label3
@@ -201,7 +201,7 @@ namespace AbarrotesSandra_IR
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(25, 62);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(27, 24);
+            this.label3.Size = new System.Drawing.Size(21, 20);
             this.label3.TabIndex = 15;
             this.label3.Text = "ID";
             // 
@@ -210,22 +210,25 @@ namespace AbarrotesSandra_IR
             this.txtID.Enabled = false;
             this.txtID.Location = new System.Drawing.Point(111, 59);
             this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(245, 30);
+            this.txtID.Size = new System.Drawing.Size(245, 26);
             this.txtID.TabIndex = 14;
             // 
             // pbCerrar
             // 
+            this.pbCerrar.BackColor = System.Drawing.Color.DimGray;
             this.pbCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbCerrar.Image = global::AbarrotesSandra_IR.Properties.Resources.iconoregresar;
             this.pbCerrar.Location = new System.Drawing.Point(929, 11);
             this.pbCerrar.Name = "pbCerrar";
             this.pbCerrar.Size = new System.Drawing.Size(48, 48);
+            this.pbCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbCerrar.TabIndex = 21;
             this.pbCerrar.TabStop = false;
             this.pbCerrar.Click += new System.EventHandler(this.pbCerrar_Click);
             // 
             // FrmCategorias
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(989, 486);

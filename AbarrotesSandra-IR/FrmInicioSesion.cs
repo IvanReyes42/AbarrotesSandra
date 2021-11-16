@@ -71,17 +71,17 @@ namespace AbarrotesSandra_IR
                 if(rol.Equals("Cajero"))
                 {
                     //MessageBox.Show("Bienvenido Cajero");
-
+                    Hide();
                     FrmPuntoDeVenta p = new FrmPuntoDeVenta();
                     p.Show();
                 }
                 else
                 {
-                   // MessageBox.Show("Bienvenido Administrador");
+                    // MessageBox.Show("Bienvenido Administrador");
+                    Hide();
                     FrmMenuPrincipal menu = new FrmMenuPrincipal();
                     menu.Show();
                 }
-
             }
             else
             {

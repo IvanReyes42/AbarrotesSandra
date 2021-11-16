@@ -29,3 +29,20 @@ S:\Documentos\7mo Semestre\Ingenieria de requerimientos\Parcial 3\abarrotessandr
 C:\Users\Ivan Reyes Ortega\Desktop\abarrotessandra\Manejadores\bin\Debug\BouncyCastle.Crypto.dll
 C:\Users\Ivan Reyes Ortega\Desktop\abarrotessandra\Manejadores\bin\Debug\itextsharp.dll
 C:\Users\Ivan Reyes Ortega\Desktop\abarrotessandra\Manejadores\bin\Debug\itextsharp.xml
+S:\Documentos\7mo Semestre\Ingenieria de requerimientos\Parcial 3\Proyecto\abarrotessandra\Manejadores\bin\Debug\Manejadores.exe.config
+S:\Documentos\7mo Semestre\Ingenieria de requerimientos\Parcial 3\Proyecto\abarrotessandra\Manejadores\bin\Debug\Manejadores.exe
+S:\Documentos\7mo Semestre\Ingenieria de requerimientos\Parcial 3\Proyecto\abarrotessandra\Manejadores\bin\Debug\Manejadores.pdb
+S:\Documentos\7mo Semestre\Ingenieria de requerimientos\Parcial 3\Proyecto\abarrotessandra\Manejadores\bin\Debug\AccesoDatos.exe
+S:\Documentos\7mo Semestre\Ingenieria de requerimientos\Parcial 3\Proyecto\abarrotessandra\Manejadores\bin\Debug\BouncyCastle.Crypto.dll
+S:\Documentos\7mo Semestre\Ingenieria de requerimientos\Parcial 3\Proyecto\abarrotessandra\Manejadores\bin\Debug\Entidades.exe
+S:\Documentos\7mo Semestre\Ingenieria de requerimientos\Parcial 3\Proyecto\abarrotessandra\Manejadores\bin\Debug\itextsharp.dll
+S:\Documentos\7mo Semestre\Ingenieria de requerimientos\Parcial 3\Proyecto\abarrotessandra\Manejadores\bin\Debug\AccesoDatos.pdb
+S:\Documentos\7mo Semestre\Ingenieria de requerimientos\Parcial 3\Proyecto\abarrotessandra\Manejadores\bin\Debug\AccesoDatos.exe.config
+S:\Documentos\7mo Semestre\Ingenieria de requerimientos\Parcial 3\Proyecto\abarrotessandra\Manejadores\bin\Debug\Entidades.pdb
+S:\Documentos\7mo Semestre\Ingenieria de requerimientos\Parcial 3\Proyecto\abarrotessandra\Manejadores\bin\Debug\Entidades.exe.config
+S:\Documentos\7mo Semestre\Ingenieria de requerimientos\Parcial 3\Proyecto\abarrotessandra\Manejadores\bin\Debug\itextsharp.xml
+S:\Documentos\7mo Semestre\Ingenieria de requerimientos\Parcial 3\Proyecto\abarrotessandra\Manejadores\obj\Debug\Manejadores.csproj.AssemblyReference.cache
+S:\Documentos\7mo Semestre\Ingenieria de requerimientos\Parcial 3\Proyecto\abarrotessandra\Manejadores\obj\Debug\Manejadores.csproj.CoreCompileInputs.cache
+S:\Documentos\7mo Semestre\Ingenieria de requerimientos\Parcial 3\Proyecto\abarrotessandra\Manejadores\obj\Debug\Manejadores.csproj.CopyComplete
+S:\Documentos\7mo Semestre\Ingenieria de requerimientos\Parcial 3\Proyecto\abarrotessandra\Manejadores\obj\Debug\Manejadores.exe
+S:\Documentos\7mo Semestre\Ingenieria de requerimientos\Parcial 3\Proyecto\abarrotessandra\Manejadores\obj\Debug\Manejadores.pdb

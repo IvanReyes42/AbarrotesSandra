@@ -162,6 +162,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -186,6 +187,18 @@
       <Project>{b6536c38-9d76-497a-8362-a0e9a9cb3653}</Project>
       <Name>Manejadores</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bagofmoney_5108.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconoregresar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconoregresar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cash-register_icon-icons.com_64587.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

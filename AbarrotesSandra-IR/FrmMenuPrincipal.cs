@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace AbarrotesSandra_IR
@@ -91,11 +85,22 @@ namespace AbarrotesSandra_IR
             }
         }
 
-        private void bntSalir_ButtonClick(object sender, EventArgs e)
+        private void bntReportes_ButtonClick(object sender, EventArgs e)
         {
-            Close();
+            if (op == 0)
+            {
+                op++;
+                FrmReportes r = new FrmReportes();
+                r.MdiParent = this;
+                r.Show();
+            }
         }
 
-        
+        private void pbSalir_Click(object sender, EventArgs e)
+        {
+            FrmInicioSesion i = new FrmInicioSesion();
+            i.Show();
+            Close();
+        }
     }
 }

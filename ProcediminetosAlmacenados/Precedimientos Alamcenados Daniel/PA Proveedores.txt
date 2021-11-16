@@ -1,0 +1,71 @@
+---------------------------Almacenar--------------------------
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE GuardarProveedores 
+	@Nombre nvarchar(50),
+	@ApellidoPaterno nvarchar(50),
+	@ApellidoMaterno nvarchar(50),
+	@Telefono nvarchar(50),
+	@Rfc nvarchar(50),
+	@RazonSocial nvarchar(50),
+	@Estatus nvarchar(50),
+	@ObtenerID int OUT
+AS
+BEGIN
+	
+	SET NOCOUNT ON;
+
+	INSERT INTO Usuarios (Nombre, ApellidoPaterno, ApellidoMaterno, Telefono, Estatus) 
+	VALUES (@Nombre, @ApellidoPaterno, @ApellidoMaterno, @Telefono, @Estatus)
+
+	SET @ObtenerID = (SELECT IdUser FROM Usuarios WHERE Nombre=@Nombre AND ApellidoPaterno=@ApellidoPaterno AND ApellidoMaterno=@ApellidoMaterno)
+
+	INSERT INTO Proveedores(FkIdUser, RFC, RazonSocial)
+	VALUES (@ObtenerID, @Rfc, @RazonSocial)
+END
+GO
+
+------------------------Modificar--------------------------------------------
+
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE PROCEDURE ModificarProveedores
+	@ID int,
+	@Nombre nvarchar(50),
+	@ApellidoPaterno nvarchar(50),
+	@ApellidoMaterno nvarchar(50),
+	@Telefono nvarchar(50),
+	@Rfc nvarchar(50),
+	@RazonSocial nvarchar(50),
+	@Estatus nvarchar(50)
+AS
+BEGIN
+
+	SET NOCOUNT ON;
+
+	UPDATE Usuarios SET Nombre=@Nombre, ApellidoPaterno=@ApellidoPaterno, ApellidoMaterno=@ApellidoMaterno, Telefono=@Telefono, Estatus=@Estatus WHERE IdUser=@ID
+	UPDATE Proveedores SET RFC=@Rfc, RazonSocial=@RazonSocial WHERE FkIdUser=@ID
+END
+GO
+
+-------------------------------------------CONSULTAR-----------------------------------------------
+
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE PROCEDURE ConsultarProveedores
+	@RazonSocial nvarchar(50)
+	
+AS
+BEGIN
+	
+	SELECT u.IdUser AS "ID", u.Nombre, u.ApellidoPaterno AS "Apellido Paterno", u.ApellidoMaterno AS "Apellido Materno", u.Telefono AS "Teléfono", p.RFC, p.RazonSocial AS "Razón Social", u.Estatus FROM Usuarios u, Proveedores p WHERE u.IdUser=p.FkIdUser AND  p.RazonSocial LIKE'%'+@RazonSocial+'%'
+END
+GO

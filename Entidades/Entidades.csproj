@@ -38,6 +38,8 @@
   <ItemGroup>
     <Compile Include="Categorias.cs" />
     <Compile Include="Compras.cs" />
+    <Compile Include="EntidadHorarios.cs" />
+    <Compile Include="EntidadProveedores.cs" />
     <Compile Include="EntidadUsuarios.cs" />
     <Compile Include="ListaProductos.cs" />
     <Compile Include="Login.cs" />

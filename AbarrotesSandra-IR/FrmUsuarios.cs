@@ -158,15 +158,23 @@ namespace AbarrotesSandra_IR
                 Actualizar();
                 limpiarCajas();
                 groupBox1.Enabled = false;
+                id = 0;
             }
             else
             {
-                string m = mu.GuardarUsuarios(new EntidadUsuarios(0, txtNombre.Text, txtApellidoPaterno.Text, txtApellidoMaterno.Text, txtUsuario.Text,
-                    txtEmail.Text, txtTelefono.Text, cmbRol.Text, cmbEstatus.Text, txtContraseña.Text));
-                MessageBox.Show(m);
-                Actualizar();
-                limpiarCajas();
-                groupBox1.Enabled = false;
+                if (mu.validarContrasena(txtContraseña, txtConfContraseña))
+                {
+                    string m = mu.GuardarUsuarios(new EntidadUsuarios(0, txtNombre.Text, txtApellidoPaterno.Text, txtApellidoMaterno.Text, txtUsuario.Text,
+                   txtEmail.Text, txtTelefono.Text, cmbRol.Text, cmbEstatus.Text, txtContraseña.Text));
+                    MessageBox.Show(m);
+                    Actualizar();
+                    limpiarCajas();
+                    groupBox1.Enabled = false;
+                }
+                else
+                {
+                    MessageBox.Show("Las contraseñas no coinciden.", "Error!");
+                }
             }
         }
 
@@ -174,6 +182,7 @@ namespace AbarrotesSandra_IR
         {
             limpiarCajas();
             groupBox1.Enabled = false;
+            id = 0;
         }
     }
 }

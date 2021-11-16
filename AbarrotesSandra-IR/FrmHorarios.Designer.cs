@@ -38,6 +38,8 @@ namespace AbarrotesSandra_IR
             this.dtpBuscar = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cmbTurno = new System.Windows.Forms.ComboBox();
+            this.dtpFecha = new System.Windows.Forms.DateTimePicker();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.lblcabntidad = new System.Windows.Forms.Label();
@@ -46,8 +48,6 @@ namespace AbarrotesSandra_IR
             this.txtEmpleado = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.pbCerrar = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHorario)).BeginInit();
@@ -88,6 +88,7 @@ namespace AbarrotesSandra_IR
             this.btnModificar.TabIndex = 30;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = false;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // btnImprimir
             // 
@@ -114,6 +115,7 @@ namespace AbarrotesSandra_IR
             this.btnNuevo.TabIndex = 28;
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.UseVisualStyleBackColor = false;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // dgvHorario
             // 
@@ -132,6 +134,7 @@ namespace AbarrotesSandra_IR
             this.dgvHorario.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvHorario.Size = new System.Drawing.Size(554, 418);
             this.dgvHorario.TabIndex = 27;
+            this.dgvHorario.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHorario_CellClick);
             // 
             // dtpBuscar
             // 
@@ -141,6 +144,7 @@ namespace AbarrotesSandra_IR
             this.dtpBuscar.Name = "dtpBuscar";
             this.dtpBuscar.Size = new System.Drawing.Size(200, 26);
             this.dtpBuscar.TabIndex = 31;
+            this.dtpBuscar.ValueChanged += new System.EventHandler(this.dtpBuscar_ValueChanged);
             // 
             // label1
             // 
@@ -153,8 +157,8 @@ namespace AbarrotesSandra_IR
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.comboBox1);
-            this.groupBox1.Controls.Add(this.dateTimePicker1);
+            this.groupBox1.Controls.Add(this.cmbTurno);
+            this.groupBox1.Controls.Add(this.dtpFecha);
             this.groupBox1.Controls.Add(this.btnGuardar);
             this.groupBox1.Controls.Add(this.btnCancelar);
             this.groupBox1.Controls.Add(this.lblcabntidad);
@@ -169,6 +173,26 @@ namespace AbarrotesSandra_IR
             this.groupBox1.TabIndex = 33;
             this.groupBox1.TabStop = false;
             // 
+            // cmbTurno
+            // 
+            this.cmbTurno.FormattingEnabled = true;
+            this.cmbTurno.Items.AddRange(new object[] {
+            "Matutino",
+            "Vespertino"});
+            this.cmbTurno.Location = new System.Drawing.Point(111, 189);
+            this.cmbTurno.Name = "cmbTurno";
+            this.cmbTurno.Size = new System.Drawing.Size(271, 28);
+            this.cmbTurno.TabIndex = 34;
+            // 
+            // dtpFecha
+            // 
+            this.dtpFecha.CustomFormat = "yyyy-MM-dd";
+            this.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpFecha.Location = new System.Drawing.Point(111, 140);
+            this.dtpFecha.Name = "dtpFecha";
+            this.dtpFecha.Size = new System.Drawing.Size(136, 26);
+            this.dtpFecha.TabIndex = 33;
+            // 
             // btnGuardar
             // 
             this.btnGuardar.BackColor = System.Drawing.Color.DimGray;
@@ -181,6 +205,7 @@ namespace AbarrotesSandra_IR
             this.btnGuardar.TabIndex = 28;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // btnCancelar
             // 
@@ -194,6 +219,7 @@ namespace AbarrotesSandra_IR
             this.btnCancelar.TabIndex = 27;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // lblcabntidad
             // 
@@ -242,32 +268,19 @@ namespace AbarrotesSandra_IR
             // 
             this.txtID.Location = new System.Drawing.Point(111, 52);
             this.txtID.Name = "txtID";
+            this.txtID.ReadOnly = true;
             this.txtID.Size = new System.Drawing.Size(271, 26);
             this.txtID.TabIndex = 14;
             // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.CustomFormat = "yyyy-MM-dd";
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(111, 140);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(136, 26);
-            this.dateTimePicker1.TabIndex = 33;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(111, 189);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(271, 28);
-            this.comboBox1.TabIndex = 34;
-            // 
             // pbCerrar
             // 
+            this.pbCerrar.BackColor = System.Drawing.Color.DimGray;
             this.pbCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbCerrar.Image = global::AbarrotesSandra_IR.Properties.Resources.iconoregresar;
             this.pbCerrar.Location = new System.Drawing.Point(1006, 10);
             this.pbCerrar.Name = "pbCerrar";
             this.pbCerrar.Size = new System.Drawing.Size(48, 48);
+            this.pbCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbCerrar.TabIndex = 34;
             this.pbCerrar.TabStop = false;
             this.pbCerrar.Click += new System.EventHandler(this.pbCerrar_Click);
@@ -295,6 +308,7 @@ namespace AbarrotesSandra_IR
             this.Name = "FrmHorarios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmHorarios";
+            this.Load += new System.EventHandler(this.FrmHorarios_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHorario)).EndInit();
             this.groupBox1.ResumeLayout(false);
@@ -316,7 +330,7 @@ namespace AbarrotesSandra_IR
         private System.Windows.Forms.DateTimePicker dtpBuscar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpFecha;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Label lblcabntidad;
@@ -325,7 +339,7 @@ namespace AbarrotesSandra_IR
         private System.Windows.Forms.TextBox txtEmpleado;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtID;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbTurno;
         private System.Windows.Forms.PictureBox pbCerrar;
     }
 }

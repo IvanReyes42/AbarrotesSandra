@@ -2,6 +2,7 @@
 using Entidades;
 using System;
 using System.Data;
+using System.Windows.Forms;
 
 namespace Manejadores
 {
@@ -54,6 +55,17 @@ namespace Manejadores
             {
                 return Conjunto;
             }
+        }
+
+        public bool validarContrasena(TextBox tb1, TextBox tb2)
+        {
+            bool r = false;
+
+            if (tb1.Text == tb2.Text)
+            {
+                r = true;
+            }
+            return r;
         }
     }
 }

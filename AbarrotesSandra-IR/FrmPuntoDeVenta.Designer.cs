@@ -60,10 +60,13 @@ namespace AbarrotesSandra_IR
             // 
             // btnRegresar
             // 
+            this.btnRegresar.BackColor = System.Drawing.Color.DimGray;
             this.btnRegresar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRegresar.Image = global::AbarrotesSandra_IR.Properties.Resources.iconoregresar;
             this.btnRegresar.Location = new System.Drawing.Point(1247, 11);
             this.btnRegresar.Name = "btnRegresar";
             this.btnRegresar.Size = new System.Drawing.Size(48, 48);
+            this.btnRegresar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnRegresar.TabIndex = 12;
             this.btnRegresar.TabStop = false;
             this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
@@ -76,7 +79,7 @@ namespace AbarrotesSandra_IR
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(20, 23);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(194, 35);
+            this.label2.Size = new System.Drawing.Size(156, 29);
             this.label2.TabIndex = 11;
             this.label2.Text = "Punto de Venta";
             // 
@@ -114,7 +117,7 @@ namespace AbarrotesSandra_IR
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(36, 92);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(130, 24);
+            this.label1.Size = new System.Drawing.Size(108, 20);
             this.label1.TabIndex = 15;
             this.label1.Text = "Buscar Producto";
             // 
@@ -122,7 +125,7 @@ namespace AbarrotesSandra_IR
             // 
             this.txtProductoBusqueda.Location = new System.Drawing.Point(172, 92);
             this.txtProductoBusqueda.Name = "txtProductoBusqueda";
-            this.txtProductoBusqueda.Size = new System.Drawing.Size(393, 30);
+            this.txtProductoBusqueda.Size = new System.Drawing.Size(393, 26);
             this.txtProductoBusqueda.TabIndex = 14;
             this.txtProductoBusqueda.TextChanged += new System.EventHandler(this.txtProductoBusqueda_TextChanged);
             // 
@@ -207,7 +210,7 @@ namespace AbarrotesSandra_IR
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(645, 120);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(101, 24);
+            this.label3.Size = new System.Drawing.Size(82, 20);
             this.label3.TabIndex = 22;
             this.label3.Text = "Ticket Venta";
             // 
@@ -259,7 +262,7 @@ namespace AbarrotesSandra_IR
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(16, 87);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(75, 24);
+            this.label5.Size = new System.Drawing.Size(61, 20);
             this.label5.TabIndex = 27;
             this.label5.Text = "Cantidad";
             // 
@@ -267,7 +270,7 @@ namespace AbarrotesSandra_IR
             // 
             this.txtCantidad.Location = new System.Drawing.Point(112, 84);
             this.txtCantidad.Name = "txtCantidad";
-            this.txtCantidad.Size = new System.Drawing.Size(380, 30);
+            this.txtCantidad.Size = new System.Drawing.Size(380, 26);
             this.txtCantidad.TabIndex = 26;
             this.txtCantidad.Text = "1";
             // 
@@ -276,7 +279,7 @@ namespace AbarrotesSandra_IR
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(16, 40);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(75, 24);
+            this.label4.Size = new System.Drawing.Size(63, 20);
             this.label4.TabIndex = 25;
             this.label4.Text = "Producto";
             // 
@@ -285,7 +288,7 @@ namespace AbarrotesSandra_IR
             this.txtProductoDetalle.Enabled = false;
             this.txtProductoDetalle.Location = new System.Drawing.Point(112, 37);
             this.txtProductoDetalle.Name = "txtProductoDetalle";
-            this.txtProductoDetalle.Size = new System.Drawing.Size(380, 30);
+            this.txtProductoDetalle.Size = new System.Drawing.Size(380, 26);
             this.txtProductoDetalle.TabIndex = 24;
             // 
             // btnQuitar
@@ -309,7 +312,7 @@ namespace AbarrotesSandra_IR
             this.label6.Font = new System.Drawing.Font("Arial Narrow", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(785, 586);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(114, 29);
+            this.label6.Size = new System.Drawing.Size(89, 23);
             this.label6.TabIndex = 30;
             this.label6.Text = "Su total es: ";
             // 
@@ -320,13 +323,13 @@ namespace AbarrotesSandra_IR
             this.lblTotal.ForeColor = System.Drawing.Color.Red;
             this.lblTotal.Location = new System.Drawing.Point(1000, 580);
             this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(64, 35);
+            this.lblTotal.Size = new System.Drawing.Size(51, 29);
             this.lblTotal.TabIndex = 31;
             this.lblTotal.Text = "$0.0";
             // 
             // FrmPuntoDeVenta
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1310, 699);

@@ -76,10 +76,13 @@ namespace AbarrotesSandra_IR
             // 
             // pbCerrar
             // 
+            this.pbCerrar.BackColor = System.Drawing.Color.DimGray;
             this.pbCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbCerrar.Image = global::AbarrotesSandra_IR.Properties.Resources.iconoregresar;
             this.pbCerrar.Location = new System.Drawing.Point(1240, 8);
             this.pbCerrar.Name = "pbCerrar";
             this.pbCerrar.Size = new System.Drawing.Size(48, 48);
+            this.pbCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbCerrar.TabIndex = 14;
             this.pbCerrar.TabStop = false;
             this.pbCerrar.Click += new System.EventHandler(this.pbCerrar_Click);

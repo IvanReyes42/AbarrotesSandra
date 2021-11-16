@@ -12,7 +12,8 @@ namespace AccesoDatos
     public class AccesoADatosIvan
     {
         SqlConnection Conexion = new SqlConnection
-                ("data source=IVANREYESPC\\IVANREYES; Initial Catalog=Abarrotessandra; User ID=sa; Password=LaVacaLola42");
+                ("data source=DANIELHP; Initial Catalog=AbarrotesSandra; User ID=sa; Password=Knj89%36L154ÑvR;");
+                //("data source=IVANREYESPC\\IVANREYES; Initial Catalog=Abarrotessandra; User ID=sa; Password=LaVacaLola42");
         public DataSet ConsultarCategorias(string Nombre)
         {
             var Conjunto = new DataSet();

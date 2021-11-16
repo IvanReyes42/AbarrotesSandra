@@ -1,0 +1,83 @@
+---------------------------Almacenar--------------------------
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE GuardarHorarios 
+	@Nombre nvarchar (50),
+	@ApellidoP nvarchar (50),
+	@ApellidoM nvarchar (50),
+	@Fecha date,
+	@Turno nvarchar(50)
+AS
+BEGIN
+	
+	SET NOCOUNT ON;
+
+	INSERT INTO Horarios(Fecha, Turno, FkIdEmpleado) 
+	VALUES (@Fecha, @Turno, (SELECT IdUser FROM Usuarios WHERE Nombre=@Nombre AND ApellidoPaterno=@ApellidoP AND ApellidoMaterno=@ApellidoM))
+END
+GO
+
+------------------------Modificar--------------------------------------------
+
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE PROCEDURE ModificarHorarios
+	@ID int,
+	@Nombre nvarchar(50),
+	@ApellidoP nvarchar(50),
+	@ApellidoM nvarchar(50),
+	@Fecha date,
+	@Turno nvarchar(50),
+	@BuscarID int OUT
+AS
+BEGIN
+
+	SET NOCOUNT ON;
+	SET @BuscarID = (SELECT IdUser FROM Usuarios WHERE Nombre=@Nombre AND ApellidoPaterno=@ApellidoP AND ApellidoMaterno=@ApellidoM)
+	UPDATE Horarios SET Fecha=@Fecha, Turno=@Turno, FkIdEmpleado=@BuscarID WHERE IdHorario=@ID
+	
+END
+GO
+
+-----------------------------------ELIMINAR-------------------------------------------------------------------
+
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE PROCEDURE EliminarHorario
+	@ID int,
+	@ParametroSalida nvarchar(100) OUT
+AS
+BEGIN
+	
+	SET NOCOUNT ON;
+
+	DELETE FROM Horarios WHERE IdHorario=@ID
+	SET @ParametroSalida = 'Se eliminó el correctamente el Horario'
+	SELECT @ParametroSalida
+END
+GO
+
+-------------------------------------------CONSULTAR-----------------------------------------------
+
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE PROCEDURE ConsultarHorarios
+	@Fecha date
+	
+AS
+BEGIN
+	
+	SELECT h.IdHorario AS "ID", u.Nombre, u.ApellidoPaterno AS "Apellido Paterno", u.ApellidoMaterno AS "Apellido Materno", h.Fecha, h.Turno FROM Horarios h, Usuarios u WHERE h.FkIdEmpleado=u.IdUser AND  h.Fecha=@Fecha
+END
+GO
