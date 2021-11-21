@@ -19,3 +19,10 @@ S:\Documentos\7mo Semestre\Ingenieria de requerimientos\Parcial 3\Proyecto\abarr
 S:\Documentos\7mo Semestre\Ingenieria de requerimientos\Parcial 3\Proyecto\abarrotessandra\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
 S:\Documentos\7mo Semestre\Ingenieria de requerimientos\Parcial 3\Proyecto\abarrotessandra\Entidades\obj\Debug\Entidades.exe
 S:\Documentos\7mo Semestre\Ingenieria de requerimientos\Parcial 3\Proyecto\abarrotessandra\Entidades\obj\Debug\Entidades.pdb
+C:\Users\Ivan Reyes Ortega\Desktop\Septimo Semestre\Ingenieria de Requerimientos\abarrotessandra\Entidades\bin\Debug\Entidades.exe.config
+C:\Users\Ivan Reyes Ortega\Desktop\Septimo Semestre\Ingenieria de Requerimientos\abarrotessandra\Entidades\bin\Debug\Entidades.exe
+C:\Users\Ivan Reyes Ortega\Desktop\Septimo Semestre\Ingenieria de Requerimientos\abarrotessandra\Entidades\bin\Debug\Entidades.pdb
+C:\Users\Ivan Reyes Ortega\Desktop\Septimo Semestre\Ingenieria de Requerimientos\abarrotessandra\Entidades\obj\Debug\Entidades.csproj.AssemblyReference.cache
+C:\Users\Ivan Reyes Ortega\Desktop\Septimo Semestre\Ingenieria de Requerimientos\abarrotessandra\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\Ivan Reyes Ortega\Desktop\Septimo Semestre\Ingenieria de Requerimientos\abarrotessandra\Entidades\obj\Debug\Entidades.exe
+C:\Users\Ivan Reyes Ortega\Desktop\Septimo Semestre\Ingenieria de Requerimientos\abarrotessandra\Entidades\obj\Debug\Entidades.pdb

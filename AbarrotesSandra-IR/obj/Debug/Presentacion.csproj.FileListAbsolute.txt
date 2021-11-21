@@ -109,3 +109,36 @@ S:\Documentos\7mo Semestre\Ingenieria de requerimientos\Parcial 3\Proyecto\abarr
 S:\Documentos\7mo Semestre\Ingenieria de requerimientos\Parcial 3\Proyecto\abarrotessandra\AbarrotesSandra-IR\obj\Debug\Presentacion.csproj.CopyComplete
 S:\Documentos\7mo Semestre\Ingenieria de requerimientos\Parcial 3\Proyecto\abarrotessandra\AbarrotesSandra-IR\obj\Debug\AbarrotesSandra-IR.exe
 S:\Documentos\7mo Semestre\Ingenieria de requerimientos\Parcial 3\Proyecto\abarrotessandra\AbarrotesSandra-IR\obj\Debug\AbarrotesSandra-IR.pdb
+C:\Users\Ivan Reyes Ortega\Desktop\Septimo Semestre\Ingenieria de Requerimientos\abarrotessandra\AbarrotesSandra-IR\bin\Debug\AbarrotesSandra-IR.exe.config
+C:\Users\Ivan Reyes Ortega\Desktop\Septimo Semestre\Ingenieria de Requerimientos\abarrotessandra\AbarrotesSandra-IR\bin\Debug\AbarrotesSandra-IR.exe
+C:\Users\Ivan Reyes Ortega\Desktop\Septimo Semestre\Ingenieria de Requerimientos\abarrotessandra\AbarrotesSandra-IR\bin\Debug\AbarrotesSandra-IR.pdb
+C:\Users\Ivan Reyes Ortega\Desktop\Septimo Semestre\Ingenieria de Requerimientos\abarrotessandra\AbarrotesSandra-IR\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Ivan Reyes Ortega\Desktop\Septimo Semestre\Ingenieria de Requerimientos\abarrotessandra\AbarrotesSandra-IR\bin\Debug\Entidades.exe
+C:\Users\Ivan Reyes Ortega\Desktop\Septimo Semestre\Ingenieria de Requerimientos\abarrotessandra\AbarrotesSandra-IR\bin\Debug\itextsharp.dll
+C:\Users\Ivan Reyes Ortega\Desktop\Septimo Semestre\Ingenieria de Requerimientos\abarrotessandra\AbarrotesSandra-IR\bin\Debug\Manejadores.exe
+C:\Users\Ivan Reyes Ortega\Desktop\Septimo Semestre\Ingenieria de Requerimientos\abarrotessandra\AbarrotesSandra-IR\bin\Debug\AccesoDatos.exe
+C:\Users\Ivan Reyes Ortega\Desktop\Septimo Semestre\Ingenieria de Requerimientos\abarrotessandra\AbarrotesSandra-IR\bin\Debug\Entidades.pdb
+C:\Users\Ivan Reyes Ortega\Desktop\Septimo Semestre\Ingenieria de Requerimientos\abarrotessandra\AbarrotesSandra-IR\bin\Debug\Entidades.exe.config
+C:\Users\Ivan Reyes Ortega\Desktop\Septimo Semestre\Ingenieria de Requerimientos\abarrotessandra\AbarrotesSandra-IR\bin\Debug\Manejadores.pdb
+C:\Users\Ivan Reyes Ortega\Desktop\Septimo Semestre\Ingenieria de Requerimientos\abarrotessandra\AbarrotesSandra-IR\bin\Debug\Manejadores.exe.config
+C:\Users\Ivan Reyes Ortega\Desktop\Septimo Semestre\Ingenieria de Requerimientos\abarrotessandra\AbarrotesSandra-IR\bin\Debug\itextsharp.xml
+C:\Users\Ivan Reyes Ortega\Desktop\Septimo Semestre\Ingenieria de Requerimientos\abarrotessandra\AbarrotesSandra-IR\bin\Debug\AccesoDatos.pdb
+C:\Users\Ivan Reyes Ortega\Desktop\Septimo Semestre\Ingenieria de Requerimientos\abarrotessandra\AbarrotesSandra-IR\bin\Debug\AccesoDatos.exe.config
+C:\Users\Ivan Reyes Ortega\Desktop\Septimo Semestre\Ingenieria de Requerimientos\abarrotessandra\AbarrotesSandra-IR\obj\Debug\Presentacion.csproj.AssemblyReference.cache
+C:\Users\Ivan Reyes Ortega\Desktop\Septimo Semestre\Ingenieria de Requerimientos\abarrotessandra\AbarrotesSandra-IR\obj\Debug\AbarrotesSandra_IR.Form1.resources
+C:\Users\Ivan Reyes Ortega\Desktop\Septimo Semestre\Ingenieria de Requerimientos\abarrotessandra\AbarrotesSandra-IR\obj\Debug\AbarrotesSandra_IR.FrmCategorias.resources
+C:\Users\Ivan Reyes Ortega\Desktop\Septimo Semestre\Ingenieria de Requerimientos\abarrotessandra\AbarrotesSandra-IR\obj\Debug\AbarrotesSandra_IR.FrmCompras.resources
+C:\Users\Ivan Reyes Ortega\Desktop\Septimo Semestre\Ingenieria de Requerimientos\abarrotessandra\AbarrotesSandra-IR\obj\Debug\AbarrotesSandra_IR.FrmHorarios.resources
+C:\Users\Ivan Reyes Ortega\Desktop\Septimo Semestre\Ingenieria de Requerimientos\abarrotessandra\AbarrotesSandra-IR\obj\Debug\AbarrotesSandra_IR.FrmInicioSesion.resources
+C:\Users\Ivan Reyes Ortega\Desktop\Septimo Semestre\Ingenieria de Requerimientos\abarrotessandra\AbarrotesSandra-IR\obj\Debug\AbarrotesSandra_IR.FrmInventario.resources
+C:\Users\Ivan Reyes Ortega\Desktop\Septimo Semestre\Ingenieria de Requerimientos\abarrotessandra\AbarrotesSandra-IR\obj\Debug\AbarrotesSandra_IR.FrmMenuPrincipal.resources
+C:\Users\Ivan Reyes Ortega\Desktop\Septimo Semestre\Ingenieria de Requerimientos\abarrotessandra\AbarrotesSandra-IR\obj\Debug\AbarrotesSandra_IR.FrmProveedores.resources
+C:\Users\Ivan Reyes Ortega\Desktop\Septimo Semestre\Ingenieria de Requerimientos\abarrotessandra\AbarrotesSandra-IR\obj\Debug\AbarrotesSandra_IR.FrmPuntoDeVenta.resources
+C:\Users\Ivan Reyes Ortega\Desktop\Septimo Semestre\Ingenieria de Requerimientos\abarrotessandra\AbarrotesSandra-IR\obj\Debug\AbarrotesSandra_IR.FrmReportes.resources
+C:\Users\Ivan Reyes Ortega\Desktop\Septimo Semestre\Ingenieria de Requerimientos\abarrotessandra\AbarrotesSandra-IR\obj\Debug\AbarrotesSandra_IR.FrmUsuarios.resources
+C:\Users\Ivan Reyes Ortega\Desktop\Septimo Semestre\Ingenieria de Requerimientos\abarrotessandra\AbarrotesSandra-IR\obj\Debug\AbarrotesSandra_IR.Properties.Resources.resources
+C:\Users\Ivan Reyes Ortega\Desktop\Septimo Semestre\Ingenieria de Requerimientos\abarrotessandra\AbarrotesSandra-IR\obj\Debug\Presentacion.csproj.GenerateResource.cache
+C:\Users\Ivan Reyes Ortega\Desktop\Septimo Semestre\Ingenieria de Requerimientos\abarrotessandra\AbarrotesSandra-IR\obj\Debug\Presentacion.csproj.CoreCompileInputs.cache
+C:\Users\Ivan Reyes Ortega\Desktop\Septimo Semestre\Ingenieria de Requerimientos\abarrotessandra\AbarrotesSandra-IR\obj\Debug\Presentacion.csproj.CopyComplete
+C:\Users\Ivan Reyes Ortega\Desktop\Septimo Semestre\Ingenieria de Requerimientos\abarrotessandra\AbarrotesSandra-IR\obj\Debug\AbarrotesSandra-IR.exe
+C:\Users\Ivan Reyes Ortega\Desktop\Septimo Semestre\Ingenieria de Requerimientos\abarrotessandra\AbarrotesSandra-IR\obj\Debug\AbarrotesSandra-IR.pdb

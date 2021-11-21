@@ -63,7 +63,7 @@ namespace AbarrotesSandra_IR
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(14, 20);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(94, 29);
+            this.label2.Size = new System.Drawing.Size(118, 35);
             this.label2.TabIndex = 15;
             this.label2.Text = "Horarios";
             // 
@@ -102,6 +102,7 @@ namespace AbarrotesSandra_IR
             this.btnImprimir.TabIndex = 29;
             this.btnImprimir.Text = "Imprimir";
             this.btnImprimir.UseVisualStyleBackColor = false;
+            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
             // 
             // btnNuevo
             // 
@@ -131,6 +132,7 @@ namespace AbarrotesSandra_IR
             this.dgvHorario.Name = "dgvHorario";
             this.dgvHorario.ReadOnly = true;
             this.dgvHorario.RowHeadersVisible = false;
+            this.dgvHorario.RowHeadersWidth = 51;
             this.dgvHorario.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvHorario.Size = new System.Drawing.Size(554, 418);
             this.dgvHorario.TabIndex = 27;
@@ -142,7 +144,7 @@ namespace AbarrotesSandra_IR
             this.dtpBuscar.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpBuscar.Location = new System.Drawing.Point(289, 106);
             this.dtpBuscar.Name = "dtpBuscar";
-            this.dtpBuscar.Size = new System.Drawing.Size(200, 26);
+            this.dtpBuscar.Size = new System.Drawing.Size(200, 30);
             this.dtpBuscar.TabIndex = 31;
             this.dtpBuscar.ValueChanged += new System.EventHandler(this.dtpBuscar_ValueChanged);
             // 
@@ -151,7 +153,7 @@ namespace AbarrotesSandra_IR
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(148, 111);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(115, 20);
+            this.label1.Size = new System.Drawing.Size(138, 24);
             this.label1.TabIndex = 32;
             this.label1.Text = "Buscar por Fecha";
             // 
@@ -181,7 +183,7 @@ namespace AbarrotesSandra_IR
             "Vespertino"});
             this.cmbTurno.Location = new System.Drawing.Point(111, 189);
             this.cmbTurno.Name = "cmbTurno";
-            this.cmbTurno.Size = new System.Drawing.Size(271, 28);
+            this.cmbTurno.Size = new System.Drawing.Size(271, 32);
             this.cmbTurno.TabIndex = 34;
             // 
             // dtpFecha
@@ -190,7 +192,7 @@ namespace AbarrotesSandra_IR
             this.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpFecha.Location = new System.Drawing.Point(111, 140);
             this.dtpFecha.Name = "dtpFecha";
-            this.dtpFecha.Size = new System.Drawing.Size(136, 26);
+            this.dtpFecha.Size = new System.Drawing.Size(136, 30);
             this.dtpFecha.TabIndex = 33;
             // 
             // btnGuardar
@@ -226,7 +228,7 @@ namespace AbarrotesSandra_IR
             this.lblcabntidad.AutoSize = true;
             this.lblcabntidad.Location = new System.Drawing.Point(25, 192);
             this.lblcabntidad.Name = "lblcabntidad";
-            this.lblcabntidad.Size = new System.Drawing.Size(42, 20);
+            this.lblcabntidad.Size = new System.Drawing.Size(52, 24);
             this.lblcabntidad.TabIndex = 21;
             this.lblcabntidad.Text = "Turno";
             // 
@@ -235,7 +237,7 @@ namespace AbarrotesSandra_IR
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(25, 145);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(46, 20);
+            this.label5.Size = new System.Drawing.Size(55, 24);
             this.label5.TabIndex = 19;
             this.label5.Text = "Fecha";
             // 
@@ -244,7 +246,7 @@ namespace AbarrotesSandra_IR
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(25, 99);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(71, 20);
+            this.label4.Size = new System.Drawing.Size(84, 24);
             this.label4.TabIndex = 17;
             this.label4.Text = "Empleado";
             // 
@@ -252,7 +254,7 @@ namespace AbarrotesSandra_IR
             // 
             this.txtEmpleado.Location = new System.Drawing.Point(111, 96);
             this.txtEmpleado.Name = "txtEmpleado";
-            this.txtEmpleado.Size = new System.Drawing.Size(271, 26);
+            this.txtEmpleado.Size = new System.Drawing.Size(271, 30);
             this.txtEmpleado.TabIndex = 16;
             // 
             // label3
@@ -260,7 +262,7 @@ namespace AbarrotesSandra_IR
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(25, 55);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(21, 20);
+            this.label3.Size = new System.Drawing.Size(27, 24);
             this.label3.TabIndex = 15;
             this.label3.Text = "ID";
             // 
@@ -269,7 +271,7 @@ namespace AbarrotesSandra_IR
             this.txtID.Location = new System.Drawing.Point(111, 52);
             this.txtID.Name = "txtID";
             this.txtID.ReadOnly = true;
-            this.txtID.Size = new System.Drawing.Size(271, 26);
+            this.txtID.Size = new System.Drawing.Size(271, 30);
             this.txtID.TabIndex = 14;
             // 
             // pbCerrar
@@ -287,7 +289,7 @@ namespace AbarrotesSandra_IR
             // 
             // FrmHorarios
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1067, 670);

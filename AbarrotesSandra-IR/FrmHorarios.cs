@@ -140,5 +140,10 @@ namespace AbarrotesSandra_IR
             groupBox1.Enabled = false;
             id = 0;
         }
+
+        private void btnImprimir_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

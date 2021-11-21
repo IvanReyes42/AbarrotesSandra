@@ -47,6 +47,9 @@
     <Compile Include="Program.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="ConexionAbarrotes">
+      <HintPath>..\..\..\..\..\source\repos\ConexionAbarrotes\ConexionAbarrotes\bin\Debug\ConexionAbarrotes.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Windows.Forms" />

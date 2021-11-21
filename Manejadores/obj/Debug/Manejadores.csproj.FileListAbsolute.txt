@@ -46,3 +46,20 @@ S:\Documentos\7mo Semestre\Ingenieria de requerimientos\Parcial 3\Proyecto\abarr
 S:\Documentos\7mo Semestre\Ingenieria de requerimientos\Parcial 3\Proyecto\abarrotessandra\Manejadores\obj\Debug\Manejadores.csproj.CopyComplete
 S:\Documentos\7mo Semestre\Ingenieria de requerimientos\Parcial 3\Proyecto\abarrotessandra\Manejadores\obj\Debug\Manejadores.exe
 S:\Documentos\7mo Semestre\Ingenieria de requerimientos\Parcial 3\Proyecto\abarrotessandra\Manejadores\obj\Debug\Manejadores.pdb
+C:\Users\Ivan Reyes Ortega\Desktop\Septimo Semestre\Ingenieria de Requerimientos\abarrotessandra\Manejadores\bin\Debug\Manejadores.exe.config
+C:\Users\Ivan Reyes Ortega\Desktop\Septimo Semestre\Ingenieria de Requerimientos\abarrotessandra\Manejadores\bin\Debug\Manejadores.exe
+C:\Users\Ivan Reyes Ortega\Desktop\Septimo Semestre\Ingenieria de Requerimientos\abarrotessandra\Manejadores\bin\Debug\Manejadores.pdb
+C:\Users\Ivan Reyes Ortega\Desktop\Septimo Semestre\Ingenieria de Requerimientos\abarrotessandra\Manejadores\bin\Debug\AccesoDatos.exe
+C:\Users\Ivan Reyes Ortega\Desktop\Septimo Semestre\Ingenieria de Requerimientos\abarrotessandra\Manejadores\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Ivan Reyes Ortega\Desktop\Septimo Semestre\Ingenieria de Requerimientos\abarrotessandra\Manejadores\bin\Debug\Entidades.exe
+C:\Users\Ivan Reyes Ortega\Desktop\Septimo Semestre\Ingenieria de Requerimientos\abarrotessandra\Manejadores\bin\Debug\itextsharp.dll
+C:\Users\Ivan Reyes Ortega\Desktop\Septimo Semestre\Ingenieria de Requerimientos\abarrotessandra\Manejadores\bin\Debug\AccesoDatos.pdb
+C:\Users\Ivan Reyes Ortega\Desktop\Septimo Semestre\Ingenieria de Requerimientos\abarrotessandra\Manejadores\bin\Debug\AccesoDatos.exe.config
+C:\Users\Ivan Reyes Ortega\Desktop\Septimo Semestre\Ingenieria de Requerimientos\abarrotessandra\Manejadores\bin\Debug\Entidades.pdb
+C:\Users\Ivan Reyes Ortega\Desktop\Septimo Semestre\Ingenieria de Requerimientos\abarrotessandra\Manejadores\bin\Debug\Entidades.exe.config
+C:\Users\Ivan Reyes Ortega\Desktop\Septimo Semestre\Ingenieria de Requerimientos\abarrotessandra\Manejadores\bin\Debug\itextsharp.xml
+C:\Users\Ivan Reyes Ortega\Desktop\Septimo Semestre\Ingenieria de Requerimientos\abarrotessandra\Manejadores\obj\Debug\Manejadores.csproj.AssemblyReference.cache
+C:\Users\Ivan Reyes Ortega\Desktop\Septimo Semestre\Ingenieria de Requerimientos\abarrotessandra\Manejadores\obj\Debug\Manejadores.csproj.CoreCompileInputs.cache
+C:\Users\Ivan Reyes Ortega\Desktop\Septimo Semestre\Ingenieria de Requerimientos\abarrotessandra\Manejadores\obj\Debug\Manejadores.csproj.CopyComplete
+C:\Users\Ivan Reyes Ortega\Desktop\Septimo Semestre\Ingenieria de Requerimientos\abarrotessandra\Manejadores\obj\Debug\Manejadores.exe
+C:\Users\Ivan Reyes Ortega\Desktop\Septimo Semestre\Ingenieria de Requerimientos\abarrotessandra\Manejadores\obj\Debug\Manejadores.pdb

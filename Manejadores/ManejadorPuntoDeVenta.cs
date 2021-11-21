@@ -162,9 +162,8 @@ namespace Manejadores
             doc.Close();
             writer.Close();
 
-            string pdfPath = Path.Combine(Application.StartupPath, ruta + @"\Ticket " + Fecha + " " + x.ToString() + ".pdf");
-
-            Process.Start(pdfPath);
+            //string pdfPath = Path.Combine(Application.StartupPath, ruta + @"\Ticket " + Fecha + " " + x.ToString() + ".pdf");
+           // Process.Start(pdfPath);
 
         }
     }
