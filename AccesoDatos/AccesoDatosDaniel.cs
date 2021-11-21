@@ -9,8 +9,8 @@ namespace AccesoDatos
     public class AccesoDatosDaniel
     {
         SqlConnection conexion = new SqlConnection
-               //("data source=DANIELHP; Initial Catalog=AbarrotesSandra; User ID=sa; Password=Knj89%36L154ÑvR;");
-               ("data source=IVANREYESPC\\IVANREYES; Initial Catalog=Abarrotessandra; User ID=sa; Password=LaVacaLola42");
+               ("data source=DANIELHP; Initial Catalog=AbarrotesSandra; User ID=sa; Password=Knj89%36L154ÑvR;");
+               //("data source=IVANREYESPC\\IVANREYES; Initial Catalog=Abarrotessandra; User ID=sa; Password=LaVacaLola42");
 
         public bool GuardarUsuarios(EntidadUsuarios eu)
         {
@@ -161,6 +161,25 @@ namespace AccesoDatos
             {
                 conexion.Close();
                 return conjunto;
+            }
+        }
+
+        public DataSet ListarEmpleados()
+        {
+            var Conjunto = new DataSet();
+            try
+            {
+                var Consultar = new SqlDataAdapter("EXEC ListarEmpleados", conexion);
+
+                conexion.Open();
+                Consultar.Fill(Conjunto, "Usuarios");
+                conexion.Close();
+                return Conjunto;
+            }
+            catch (Exception)
+            {
+                conexion.Close();
+                return Conjunto;
             }
         }
 

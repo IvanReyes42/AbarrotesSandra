@@ -35,6 +35,8 @@ namespace AbarrotesSandra_IR
             try
             {
                 dgvHorario.DataSource = mh.ConsultarHorarios(dtpBuscar.Text).Tables[0];
+                cmbEmpleado.DataSource = mh.LlenarComboEmpleados().Tables[0];
+                cmbEmpleado.DisplayMember = "NombreCompleto";
             }
             catch (Exception ex)
             {
@@ -62,7 +64,6 @@ namespace AbarrotesSandra_IR
         public void LimpiarCajas()
         {
             txtID.Clear();
-            txtEmpleado.Clear();
             dtpFecha.Value = DateTime.Now.Date;
         }
 
@@ -84,9 +85,11 @@ namespace AbarrotesSandra_IR
                 groupBox1.Enabled = true;
 
                 txtID.Text = eh.ID.ToString();
-                txtEmpleado.Text = eh.Nombre + " " + eh.ApellidoP + " " + eh.ApellidoM;
+                int index = cmbEmpleado.FindString(eh.Nombre + " " + eh.ApellidoP + " " + eh.ApellidoM);
+                cmbEmpleado.SelectedIndex = index;
                 dtpFecha.Text = eh.Fecha;
-                cmbTurno.SelectedIndex = cmbTurno.FindString(eh.Turno);
+                int indexT = cmbTurno.FindString(eh.Turno);
+                cmbTurno.SelectedIndex = indexT;
             }
             else
             {
@@ -102,35 +105,28 @@ namespace AbarrotesSandra_IR
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            if (mh.ValidarEmpleado(txtEmpleado).Equals(""))
-            {
-                string nombre, apellidop, apellidom;
-                string[] separar = txtEmpleado.Text.Split(' ');
-                nombre = separar[0];
-                apellidop = separar[1];
-                apellidom = separar[2];
+            string nombre, apellidop, apellidom;
+            string[] separar = cmbEmpleado.Text.Split(' ');
+            nombre = separar[0];
+            apellidop = separar[1];
+            apellidom = separar[2];
 
-                if (id > 0)
-                {
-                    string m = mh.ModificarHorarios(new EntidadHorarios(int.Parse(txtID.Text), nombre, apellidop, apellidom, dtpFecha.Text, cmbTurno.Text));
-                    MessageBox.Show(m);
-                    Actualizar();
-                    LimpiarCajas();
-                    groupBox1.Enabled = false;
-                    id = 0;
-                }
-                else
-                {
-                    string m = mh.GuardarHorarios(new EntidadHorarios(0, nombre, apellidop, apellidom, dtpFecha.Text, cmbTurno.Text));
-                    MessageBox.Show(m);
-                    Actualizar();
-                    LimpiarCajas();
-                    groupBox1.Enabled = false;
-                }
+            if (id > 0)
+            {
+                string m = mh.ModificarHorarios(new EntidadHorarios(int.Parse(txtID.Text), nombre, apellidop, apellidom, dtpFecha.Text, cmbTurno.Text));
+                MessageBox.Show(m);
+                Actualizar();
+                LimpiarCajas();
+                groupBox1.Enabled = false;
+                id = 0;
             }
             else
             {
-                MessageBox.Show(mh.ValidarEmpleado(txtEmpleado), "Error!");
+                string m = mh.GuardarHorarios(new EntidadHorarios(0, nombre, apellidop, apellidom, dtpFecha.Text, cmbTurno.Text));
+                MessageBox.Show(m);
+                Actualizar();
+                LimpiarCajas();
+                groupBox1.Enabled = false;
             }
         }
 

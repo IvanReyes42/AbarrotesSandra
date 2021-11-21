@@ -57,22 +57,29 @@ namespace Manejadores
             }
         }
 
-        public string ValidarEmpleado(TextBox tb)
+        //public string ValidarEmpleado(TextBox tb)
+        //{
+        //    string r = "";
+        //    try
+        //    {
+        //        string[] separar = tb.Text.Split(' ');
+        //        if (separar.Length < 3)
+        //        {
+        //            r = "Se debe ingresar el nombre del empleado con sus apellidos separado por un espacio.";
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        r = ex.Message;
+        //    }
+        //    return r;
+        //}
+
+        public DataSet LlenarComboEmpleados()
         {
-            string r = "";
-            try
-            {
-                string[] separar = tb.Text.Split(' ');
-                if (separar.Length < 3)
-                {
-                    r = "Se debe ingresar el nombre del empleado con sus apellidos separado por un espacio.";
-                }
-            }
-            catch (Exception ex)
-            {
-                r = ex.Message;
-            }
-            return r;
+            var Conjunto = new DataSet();
+            Conjunto = add.ListarEmpleados();
+            return Conjunto;
         }
     }
 }
