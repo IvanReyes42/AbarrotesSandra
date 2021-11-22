@@ -30,13 +30,15 @@ namespace AbarrotesSandra_IR
         private void InitializeComponent()
         {
             this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnEntrar = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -48,25 +50,16 @@ namespace AbarrotesSandra_IR
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(141, 21);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(204, 35);
+            this.label2.Size = new System.Drawing.Size(160, 29);
             this.label2.TabIndex = 8;
             this.label2.Text = "Inicio de Sesión";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.DimGray;
-            this.pictureBox1.Location = new System.Drawing.Point(0, -1);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(486, 68);
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(202, 253);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(65, 24);
+            this.label1.Size = new System.Drawing.Size(54, 20);
             this.label1.TabIndex = 10;
             this.label1.Text = "Usuario";
             // 
@@ -74,7 +67,7 @@ namespace AbarrotesSandra_IR
             // 
             this.txtUsuario.Location = new System.Drawing.Point(46, 280);
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(377, 30);
+            this.txtUsuario.Size = new System.Drawing.Size(377, 26);
             this.txtUsuario.TabIndex = 9;
             // 
             // label3
@@ -82,7 +75,7 @@ namespace AbarrotesSandra_IR
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(187, 329);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(94, 24);
+            this.label3.Size = new System.Drawing.Size(76, 20);
             this.label3.TabIndex = 12;
             this.label3.Text = "Contraseña";
             // 
@@ -91,7 +84,7 @@ namespace AbarrotesSandra_IR
             this.txtPassword.Location = new System.Drawing.Point(46, 356);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(377, 30);
+            this.txtPassword.Size = new System.Drawing.Size(377, 26);
             this.txtPassword.TabIndex = 11;
             // 
             // btnSalir
@@ -122,18 +115,38 @@ namespace AbarrotesSandra_IR
             this.btnEntrar.UseVisualStyleBackColor = false;
             this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click);
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::AbarrotesSandra_IR.Properties.Resources.ccb103fa309f402a8ffe523de21e7168;
+            this.pictureBox2.Location = new System.Drawing.Point(120, 84);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(226, 177);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 15;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.DimGray;
+            this.pictureBox1.Location = new System.Drawing.Point(0, -1);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(486, 68);
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
+            // 
             // FrmInicioSesion
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(484, 527);
             this.ControlBox = false;
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.btnEntrar);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtPassword);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox1);
@@ -143,6 +156,7 @@ namespace AbarrotesSandra_IR
             this.Name = "FrmInicioSesion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmInicioSesion";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -159,5 +173,6 @@ namespace AbarrotesSandra_IR
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Button btnEntrar;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

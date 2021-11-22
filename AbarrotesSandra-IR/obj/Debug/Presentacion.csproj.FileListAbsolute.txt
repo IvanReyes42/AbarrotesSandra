@@ -147,3 +147,8 @@ C:\Users\Ivan Reyes Ortega\Desktop\abarrotessandra\AbarrotesSandra-IR\bin\Debug\
 C:\Users\Ivan Reyes Ortega\Desktop\abarrotessandra\AbarrotesSandra-IR\bin\Debug\Microsoft.mshtml.dll
 C:\Users\Ivan Reyes Ortega\Desktop\abarrotessandra\AbarrotesSandra-IR\bin\Debug\Spire.License.xml
 C:\Users\Ivan Reyes Ortega\Desktop\abarrotessandra\AbarrotesSandra-IR\bin\Debug\Spire.Pdf.xml
+S:\Documentos\7mo Semestre\Ingenieria de requerimientos\Parcial 3\Proyecto\abarrotessandra\AbarrotesSandra-IR\bin\Debug\Spire.License.dll
+S:\Documentos\7mo Semestre\Ingenieria de requerimientos\Parcial 3\Proyecto\abarrotessandra\AbarrotesSandra-IR\bin\Debug\Spire.Pdf.dll
+S:\Documentos\7mo Semestre\Ingenieria de requerimientos\Parcial 3\Proyecto\abarrotessandra\AbarrotesSandra-IR\bin\Debug\Microsoft.mshtml.dll
+S:\Documentos\7mo Semestre\Ingenieria de requerimientos\Parcial 3\Proyecto\abarrotessandra\AbarrotesSandra-IR\bin\Debug\Spire.License.xml
+S:\Documentos\7mo Semestre\Ingenieria de requerimientos\Parcial 3\Proyecto\abarrotessandra\AbarrotesSandra-IR\bin\Debug\Spire.Pdf.xml

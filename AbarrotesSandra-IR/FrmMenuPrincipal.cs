@@ -19,9 +19,20 @@ namespace AbarrotesSandra_IR
             }
         }
 
-        private void btnVentas_ButtonClick(object sender, EventArgs e)
+     
+
+        private void pbSalir_Click(object sender, EventArgs e)
         {
-            if(op == 0)
+            FrmInicioSesion i = new FrmInicioSesion();
+            i.Show();
+            Close();
+        }
+
+        private void tsbVentas_Click(object sender, EventArgs e)
+        {
+            DesmarcarBotones();
+            tsbVentas.Checked = true;
+            if (op == 0)
             {
                 op++;
                 FrmPuntoDeVenta pv = new FrmPuntoDeVenta();
@@ -30,8 +41,10 @@ namespace AbarrotesSandra_IR
             }
         }
 
-        private void btnCompras_ButtonClick(object sender, EventArgs e)
+        private void tsbCompras_Click(object sender, EventArgs e)
         {
+            DesmarcarBotones();
+            tsbCompras.Checked = true;
             if (op == 0)
             {
                 op++;
@@ -41,8 +54,10 @@ namespace AbarrotesSandra_IR
             }
         }
 
-        private void btnProveedores_ButtonClick(object sender, EventArgs e)
+        private void tsbProveedores_Click(object sender, EventArgs e)
         {
+            DesmarcarBotones();
+            tsbProveedores.Checked = true;
             if (op == 0)
             {
                 op++;
@@ -52,8 +67,10 @@ namespace AbarrotesSandra_IR
             }
         }
 
-        private void btnInventario_ButtonClick(object sender, EventArgs e)
+        private void tsbInventario_Click(object sender, EventArgs e)
         {
+            DesmarcarBotones();
+            tsbInventario.Checked = true;
             if (op == 0)
             {
                 op++;
@@ -63,8 +80,10 @@ namespace AbarrotesSandra_IR
             }
         }
 
-        private void BtnUsuarios_ButtonClick(object sender, EventArgs e)
+        private void tsbUsuarios_Click(object sender, EventArgs e)
         {
+            DesmarcarBotones();
+            tsbUsuarios.Checked = true;
             if (op == 0)
             {
                 op++;
@@ -74,8 +93,10 @@ namespace AbarrotesSandra_IR
             }
         }
 
-        private void btnHorarios_ButtonClick(object sender, EventArgs e)
+        private void tsbHorarios_Click(object sender, EventArgs e)
         {
+            DesmarcarBotones();
+            tsbHorarios.Checked = true;
             if (op == 0)
             {
                 op++;
@@ -85,8 +106,11 @@ namespace AbarrotesSandra_IR
             }
         }
 
-        private void bntReportes_ButtonClick(object sender, EventArgs e)
+        private void tsbReportes_Click(object sender, EventArgs e)
         {
+            DesmarcarBotones();
+            tsbReportes.Checked = true;
+            
             if (op == 0)
             {
                 op++;
@@ -96,11 +120,26 @@ namespace AbarrotesSandra_IR
             }
         }
 
-        private void pbSalir_Click(object sender, EventArgs e)
+        private void DesmarcarBotones()
         {
-            FrmInicioSesion i = new FrmInicioSesion();
-            i.Show();
-            Close();
+            tsbVentas.Checked = false;
+            tsbCompras.Checked = false;
+            tsbProveedores.Checked = false;
+            tsbInventario.Checked = false;
+            tsbUsuarios.Checked = false;
+            tsbHorarios.Checked = false;
+            tsbReportes.Checked = false;
+        }
+
+        private void FrmMenuPrincipal_Load(object sender, EventArgs e)
+        {
+            foreach (Control ctrl in this.Controls)
+            {
+                if (ctrl is MdiClient)
+                {
+                    ctrl.BackColor = Color.WhiteSmoke;
+                }
+            }
         }
     }
 }

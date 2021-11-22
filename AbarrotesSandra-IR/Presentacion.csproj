@@ -206,5 +206,8 @@
   <ItemGroup>
     <None Include="Resources\cash-register_icon-icons.com_64587.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ccb103fa309f402a8ffe523de21e7168.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

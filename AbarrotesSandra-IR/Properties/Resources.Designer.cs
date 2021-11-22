@@ -83,6 +83,16 @@ namespace AbarrotesSandra_IR.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ccb103fa309f402a8ffe523de21e7168 {
+            get {
+                object obj = ResourceManager.GetObject("ccb103fa309f402a8ffe523de21e7168", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap iconoregresar {
             get {
                 object obj = ResourceManager.GetObject("iconoregresar", resourceCulture);
