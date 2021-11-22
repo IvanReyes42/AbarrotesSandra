@@ -64,17 +64,26 @@ namespace Manejadores
             dt = AD.CorteDeCaja(IdUser, Fecha);
             return dt;
         }
-        public void GenerarTicket(List<ListaProductos> l,string ruta,double total)
+        public string GenerarTicket(List<ListaProductos> l,string ruta,double total)
         {
             string Fecha = DateTime.Now.ToString("yyyy-MM-dd");
             Document doc = new Document(PageSize.B7);
-            
-            
-            
-            PdfWriter writer = PdfWriter.GetInstance(doc,
-                                        new FileStream(ruta+@"\Ticket "+Fecha+" "+x.ToString()+".pdf", FileMode.Create));
 
-            x++;
+            PdfWriter writer;
+
+
+            if (ruta.Equals(""))
+            {
+                writer = PdfWriter.GetInstance(doc,
+                                     new FileStream("Ticket.pdf", FileMode.Create));
+            }
+            else
+            {
+                writer = PdfWriter.GetInstance(doc,
+                                        new FileStream(ruta + "Ticket " + Fecha + " " + x.ToString() + ".pdf", FileMode.Create));
+            }
+
+            
           
             doc.AddTitle("Ticket Venta");
             doc.AddCreator("Abarrotes Sandra");
@@ -161,9 +170,12 @@ namespace Manejadores
 
             doc.Close();
             writer.Close();
-
+            string resultado = "Ticket " + Fecha + " " + x.ToString() + ".pdf";
+            x++;
+            return resultado;
+            
             //string pdfPath = Path.Combine(Application.StartupPath, ruta + @"\Ticket " + Fecha + " " + x.ToString() + ".pdf");
-           // Process.Start(pdfPath);
+            // Process.Start(pdfPath);
 
         }
     }

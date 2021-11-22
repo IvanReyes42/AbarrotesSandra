@@ -60,7 +60,19 @@ namespace AbarrotesSandra_IR
                 MessageBox.Show(ex.Message, "Error al generar la entidad.");
             }
         }
+        public void LlenarDatos()
+        {
+            txtId.Text = ep.ID.ToString();
+            txtNombre.Text = ep.Nombre;
+            txtAP.Text = ep.ApellidoP;
+            txtAM.Text = ep.ApellidoM;
+            txtTelefono.Text = ep.Telefono;
+            txtRFC.Text = ep.RFC;
+            txtRazonSocial.Text = ep.RazonSocial;
+            int index = cmbEstatus.FindString(ep.Estatus);
+            cmbEstatus.SelectedIndex = index;
 
+        }
         public void limpiarCajas()
         {
             txtId.Clear();
@@ -80,6 +92,8 @@ namespace AbarrotesSandra_IR
         private void btnNuevo_Click(object sender, EventArgs e)
         {
             groupBox1.Enabled = true;
+            limpiarCajas();
+            cmbEstatus.SelectedIndex = 0;
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
@@ -109,6 +123,7 @@ namespace AbarrotesSandra_IR
         {
             fila = e.RowIndex;
             GenerarDatos(fila);
+            LlenarDatos();
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -140,5 +155,6 @@ namespace AbarrotesSandra_IR
             groupBox1.Enabled = false;
             id = 0;
         }
+        
     }
 }

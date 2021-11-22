@@ -1,6 +1,7 @@
 ﻿using Entidades;
 using Manejadores;
 using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace AbarrotesSandra_IR
@@ -139,7 +140,16 @@ namespace AbarrotesSandra_IR
 
         private void btnImprimir_Click(object sender, EventArgs e)
         {
+            printDialog1.Document = Printer;
+            printDialog1.ShowDialog();
+        }
 
+        private void Printer_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            Bitmap map = new Bitmap(this.dgvHorario.Width, this.dgvHorario.Height);
+            dgvHorario.DrawToBitmap(map, new Rectangle(0, 0, dgvHorario.Width, dgvHorario.Height));
+            e.Graphics.DrawImage(map, 200, 150);
+            e.Graphics.DrawString("Horarios de " + dtpFecha, new Font("Arial", 16, FontStyle.Bold), Brushes.Black, new Point(300, 30));
         }
     }
 }

@@ -121,13 +121,28 @@ namespace AbarrotesSandra_IR
                 MessageBox.Show("Seleccione una fila para poder modificar.", "Error al modificar.");
             }
         }
-
+        
         private void dgvUsuarios_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             fila = e.RowIndex;
             GenerarDatos(fila);
+            LlenarDatos();
         }
+        public void LlenarDatos()
+        {
+            txtID.Text = eu.ID.ToString();
+            txtNombre.Text = eu.Nombre;
+            txtApellidoPaterno.Text = eu.ApellidoP;
+            txtApellidoMaterno.Text = eu.ApellidoM;
+            txtUsuario.Text = eu.Usuario;
+            txtEmail.Text = eu.Email;
+            txtTelefono.Text = eu.Telefono;
 
+            int indexrol = cmbRol.FindString(eu.Rol);
+            int indexes = cmbEstatus.FindString(eu.Estatus);
+            cmbRol.SelectedIndex = indexrol;
+            cmbEstatus.SelectedIndex = indexes;
+        }
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             if (eu.ID > 0)

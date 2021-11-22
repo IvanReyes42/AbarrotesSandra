@@ -7,8 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Spire.Pdf;
 using Manejadores;
 using Entidades;
+using System.Drawing.Printing;
 
 namespace AbarrotesSandra_IR
 {
@@ -34,7 +36,19 @@ namespace AbarrotesSandra_IR
         private void FrmPuntoDeVenta_Load(object sender, EventArgs e)
         {
             LlenarData("");
+            LlenarImpresoras();
             //LlenarDataTicket();
+        }
+        public void LlenarImpresoras()
+        {
+            string printers;
+            cmbImpresoras.Items.Add("Guardar Archivo"); 
+            for (int i = 0; i < PrinterSettings.InstalledPrinters.Count; i++)
+            {
+                printers = PrinterSettings.InstalledPrinters[i];
+                cmbImpresoras.Items.Add(printers);
+            }
+            
         }
         public void LlenarData(string Nombre)
         {
@@ -187,23 +201,24 @@ namespace AbarrotesSandra_IR
         {
             if (lp.Count > 0)
             {
-                if(contador == 0)
+                if(cmbImpresoras.Text.Equals("Guardar Archivo"))
                 {
                     contador++;
                     using (var fd = new FolderBrowserDialog())
                     {
-                        if (fd.ShowDialog() == System.Windows.Forms.DialogResult.OK && !string.IsNullOrWhiteSpace(fd.SelectedPath))
+                        if (fd.ShowDialog() == DialogResult.OK && !string.IsNullOrWhiteSpace(fd.SelectedPath))
                         {
-
-                            mpv.GenerarTicket(lp, fd.SelectedPath,total);
-                            ruta = fd.SelectedPath;
-
+                            mpv.GenerarTicket(lp, fd.SelectedPath +"\\", total);
                         }
                     }
                 }
                 else
                 {
-                    mpv.GenerarTicket(lp,ruta,total);
+                    PdfDocument pdf = new PdfDocument();
+                    pdf.LoadFromFile(mpv.GenerarTicket(lp, "", total));
+                    //Set the printer
+                    pdf.PrintSettings.PrinterName = cmbImpresoras.Text;
+                    pdf.Print();
                 }
                 
             }

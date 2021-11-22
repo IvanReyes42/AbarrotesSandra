@@ -45,3 +45,4 @@ C:\Users\Ivan Reyes Ortega\Desktop\Septimo Semestre\Ingenieria de Requerimientos
 C:\Users\Ivan Reyes Ortega\Desktop\Septimo Semestre\Ingenieria de Requerimientos\abarrotessandra\AccesoDatos\bin\Debug\ConexionAbarrotes.dll
 C:\Users\Ivan Reyes Ortega\Desktop\Septimo Semestre\Ingenieria de Requerimientos\abarrotessandra\AccesoDatos\bin\Debug\ConexionAbarrotes.pdb
 S:\Documentos\7mo Semestre\Ingenieria de requerimientos\Parcial 3\Proyecto\abarrotessandra\AccesoDatos\bin\Debug\ConexionAbarrotes.pdb
+C:\Users\Ivan Reyes Ortega\Desktop\abarrotessandra\AccesoDatos\bin\Debug\ConexionAbarrotes.pdb

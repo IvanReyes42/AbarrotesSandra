@@ -142,3 +142,8 @@ C:\Users\Ivan Reyes Ortega\Desktop\Septimo Semestre\Ingenieria de Requerimientos
 C:\Users\Ivan Reyes Ortega\Desktop\Septimo Semestre\Ingenieria de Requerimientos\abarrotessandra\AbarrotesSandra-IR\obj\Debug\Presentacion.csproj.CopyComplete
 C:\Users\Ivan Reyes Ortega\Desktop\Septimo Semestre\Ingenieria de Requerimientos\abarrotessandra\AbarrotesSandra-IR\obj\Debug\AbarrotesSandra-IR.exe
 C:\Users\Ivan Reyes Ortega\Desktop\Septimo Semestre\Ingenieria de Requerimientos\abarrotessandra\AbarrotesSandra-IR\obj\Debug\AbarrotesSandra-IR.pdb
+C:\Users\Ivan Reyes Ortega\Desktop\abarrotessandra\AbarrotesSandra-IR\bin\Debug\Spire.License.dll
+C:\Users\Ivan Reyes Ortega\Desktop\abarrotessandra\AbarrotesSandra-IR\bin\Debug\Spire.Pdf.dll
+C:\Users\Ivan Reyes Ortega\Desktop\abarrotessandra\AbarrotesSandra-IR\bin\Debug\Microsoft.mshtml.dll
+C:\Users\Ivan Reyes Ortega\Desktop\abarrotessandra\AbarrotesSandra-IR\bin\Debug\Spire.License.xml
+C:\Users\Ivan Reyes Ortega\Desktop\abarrotessandra\AbarrotesSandra-IR\bin\Debug\Spire.Pdf.xml
