@@ -83,7 +83,7 @@ namespace AbarrotesSandra_IR
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(23, 21);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(133, 29);
+            this.label2.Size = new System.Drawing.Size(166, 35);
             this.label2.TabIndex = 11;
             this.label2.Text = "Proveedores";
             // 
@@ -101,6 +101,7 @@ namespace AbarrotesSandra_IR
             this.dgvProveedores.AllowUserToAddRows = false;
             this.dgvProveedores.AllowUserToDeleteRows = false;
             this.dgvProveedores.AllowUserToResizeRows = false;
+            this.dgvProveedores.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvProveedores.BackgroundColor = System.Drawing.Color.DimGray;
             this.dgvProveedores.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvProveedores.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -121,7 +122,7 @@ namespace AbarrotesSandra_IR
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(62, 106);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(118, 20);
+            this.label1.Size = new System.Drawing.Size(140, 24);
             this.label1.TabIndex = 15;
             this.label1.Text = "Buscar Proveedor";
             // 
@@ -129,7 +130,7 @@ namespace AbarrotesSandra_IR
             // 
             this.txtBuscar.Location = new System.Drawing.Point(208, 103);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(542, 26);
+            this.txtBuscar.Size = new System.Drawing.Size(542, 30);
             this.txtBuscar.TabIndex = 14;
             this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
@@ -167,7 +168,7 @@ namespace AbarrotesSandra_IR
             "Inactivo"});
             this.cmbEstatus.Location = new System.Drawing.Point(153, 388);
             this.cmbEstatus.Name = "cmbEstatus";
-            this.cmbEstatus.Size = new System.Drawing.Size(305, 28);
+            this.cmbEstatus.Size = new System.Drawing.Size(305, 32);
             this.cmbEstatus.TabIndex = 38;
             // 
             // label10
@@ -175,7 +176,7 @@ namespace AbarrotesSandra_IR
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(23, 388);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(52, 20);
+            this.label10.Size = new System.Drawing.Size(65, 24);
             this.label10.TabIndex = 37;
             this.label10.Text = "Estatus";
             // 
@@ -212,7 +213,7 @@ namespace AbarrotesSandra_IR
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(23, 340);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(88, 20);
+            this.label9.Size = new System.Drawing.Size(105, 24);
             this.label9.TabIndex = 31;
             this.label9.Text = "Razon Social";
             // 
@@ -220,7 +221,7 @@ namespace AbarrotesSandra_IR
             // 
             this.txtRazonSocial.Location = new System.Drawing.Point(153, 337);
             this.txtRazonSocial.Name = "txtRazonSocial";
-            this.txtRazonSocial.Size = new System.Drawing.Size(305, 26);
+            this.txtRazonSocial.Size = new System.Drawing.Size(305, 30);
             this.txtRazonSocial.TabIndex = 30;
             // 
             // label8
@@ -228,7 +229,7 @@ namespace AbarrotesSandra_IR
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(23, 297);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(35, 20);
+            this.label8.Size = new System.Drawing.Size(44, 24);
             this.label8.TabIndex = 29;
             this.label8.Text = "RFC";
             // 
@@ -236,7 +237,7 @@ namespace AbarrotesSandra_IR
             // 
             this.txtRFC.Location = new System.Drawing.Point(153, 294);
             this.txtRFC.Name = "txtRFC";
-            this.txtRFC.Size = new System.Drawing.Size(305, 26);
+            this.txtRFC.Size = new System.Drawing.Size(305, 30);
             this.txtRFC.TabIndex = 28;
             // 
             // label7
@@ -244,7 +245,7 @@ namespace AbarrotesSandra_IR
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(23, 248);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(61, 20);
+            this.label7.Size = new System.Drawing.Size(73, 24);
             this.label7.TabIndex = 27;
             this.label7.Text = "Telefono";
             // 
@@ -252,7 +253,7 @@ namespace AbarrotesSandra_IR
             // 
             this.txtTelefono.Location = new System.Drawing.Point(153, 245);
             this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(305, 26);
+            this.txtTelefono.Size = new System.Drawing.Size(305, 30);
             this.txtTelefono.TabIndex = 26;
             // 
             // label6
@@ -260,7 +261,7 @@ namespace AbarrotesSandra_IR
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(15, 200);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(111, 20);
+            this.label6.Size = new System.Drawing.Size(132, 24);
             this.label6.TabIndex = 25;
             this.label6.Text = "Apellido Materno";
             // 
@@ -268,7 +269,7 @@ namespace AbarrotesSandra_IR
             // 
             this.txtAM.Location = new System.Drawing.Point(153, 197);
             this.txtAM.Name = "txtAM";
-            this.txtAM.Size = new System.Drawing.Size(305, 26);
+            this.txtAM.Size = new System.Drawing.Size(305, 30);
             this.txtAM.TabIndex = 24;
             // 
             // label5
@@ -276,7 +277,7 @@ namespace AbarrotesSandra_IR
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(19, 146);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(109, 20);
+            this.label5.Size = new System.Drawing.Size(128, 24);
             this.label5.TabIndex = 23;
             this.label5.Text = "Apellido Paterno";
             // 
@@ -284,7 +285,7 @@ namespace AbarrotesSandra_IR
             // 
             this.txtAP.Location = new System.Drawing.Point(153, 143);
             this.txtAP.Name = "txtAP";
-            this.txtAP.Size = new System.Drawing.Size(305, 26);
+            this.txtAP.Size = new System.Drawing.Size(305, 30);
             this.txtAP.TabIndex = 22;
             // 
             // label4
@@ -292,7 +293,7 @@ namespace AbarrotesSandra_IR
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(23, 92);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(57, 20);
+            this.label4.Size = new System.Drawing.Size(69, 24);
             this.label4.TabIndex = 21;
             this.label4.Text = "Nombre";
             // 
@@ -300,7 +301,7 @@ namespace AbarrotesSandra_IR
             // 
             this.txtNombre.Location = new System.Drawing.Point(153, 89);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(305, 26);
+            this.txtNombre.Size = new System.Drawing.Size(305, 30);
             this.txtNombre.TabIndex = 20;
             // 
             // label3
@@ -308,7 +309,7 @@ namespace AbarrotesSandra_IR
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(23, 41);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(20, 20);
+            this.label3.Size = new System.Drawing.Size(24, 24);
             this.label3.TabIndex = 19;
             this.label3.Text = "Id";
             // 
@@ -317,7 +318,7 @@ namespace AbarrotesSandra_IR
             this.txtId.Location = new System.Drawing.Point(153, 38);
             this.txtId.Name = "txtId";
             this.txtId.ReadOnly = true;
-            this.txtId.Size = new System.Drawing.Size(305, 26);
+            this.txtId.Size = new System.Drawing.Size(305, 30);
             this.txtId.TabIndex = 18;
             // 
             // btnModificar
@@ -350,7 +351,7 @@ namespace AbarrotesSandra_IR
             // 
             // FrmProveedores
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1315, 693);

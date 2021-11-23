@@ -98,6 +98,7 @@ namespace AbarrotesSandra_IR
             this.dgvProductos.AllowUserToAddRows = false;
             this.dgvProductos.AllowUserToDeleteRows = false;
             this.dgvProductos.AllowUserToResizeRows = false;
+            this.dgvProductos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvProductos.BackgroundColor = System.Drawing.Color.DimGray;
             this.dgvProductos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvProductos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -177,6 +178,7 @@ namespace AbarrotesSandra_IR
             this.dvgVenta.AllowUserToAddRows = false;
             this.dvgVenta.AllowUserToDeleteRows = false;
             this.dvgVenta.AllowUserToResizeRows = false;
+            this.dvgVenta.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dvgVenta.BackgroundColor = System.Drawing.Color.DimGray;
             this.dvgVenta.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dvgVenta.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;

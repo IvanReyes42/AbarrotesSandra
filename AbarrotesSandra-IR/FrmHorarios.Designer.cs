@@ -51,6 +51,8 @@ namespace AbarrotesSandra_IR
             this.pbCerrar = new System.Windows.Forms.PictureBox();
             this.Printer = new System.Drawing.Printing.PrintDocument();
             this.printDialog1 = new System.Windows.Forms.PrintDialog();
+            this.dtpFechaFin = new System.Windows.Forms.DateTimePicker();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHorario)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -125,6 +127,7 @@ namespace AbarrotesSandra_IR
             this.dgvHorario.AllowUserToAddRows = false;
             this.dgvHorario.AllowUserToDeleteRows = false;
             this.dgvHorario.AllowUserToResizeRows = false;
+            this.dgvHorario.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvHorario.BackgroundColor = System.Drawing.Color.DimGray;
             this.dgvHorario.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvHorario.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -144,20 +147,20 @@ namespace AbarrotesSandra_IR
             // 
             this.dtpBuscar.CustomFormat = "yyyy-MM-dd";
             this.dtpBuscar.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpBuscar.Location = new System.Drawing.Point(289, 106);
+            this.dtpBuscar.Location = new System.Drawing.Point(217, 106);
             this.dtpBuscar.Name = "dtpBuscar";
-            this.dtpBuscar.Size = new System.Drawing.Size(200, 30);
+            this.dtpBuscar.Size = new System.Drawing.Size(150, 30);
             this.dtpBuscar.TabIndex = 31;
             this.dtpBuscar.ValueChanged += new System.EventHandler(this.dtpBuscar_ValueChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(148, 111);
+            this.label1.Location = new System.Drawing.Point(33, 106);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(138, 24);
+            this.label1.Size = new System.Drawing.Size(169, 24);
             this.label1.TabIndex = 32;
-            this.label1.Text = "Buscar por Fecha";
+            this.label1.Text = "Buscar por Fecha De:";
             // 
             // groupBox1
             // 
@@ -290,13 +293,28 @@ namespace AbarrotesSandra_IR
             this.pbCerrar.TabStop = false;
             this.pbCerrar.Click += new System.EventHandler(this.pbCerrar_Click);
             // 
-            // Printer
-            // 
-            this.Printer.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.Printer_PrintPage);
-            // 
             // printDialog1
             // 
             this.printDialog1.UseEXDialog = true;
+            // 
+            // dtpFechaFin
+            // 
+            this.dtpFechaFin.CustomFormat = "yyyy-MM-dd";
+            this.dtpFechaFin.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpFechaFin.Location = new System.Drawing.Point(436, 106);
+            this.dtpFechaFin.Name = "dtpFechaFin";
+            this.dtpFechaFin.Size = new System.Drawing.Size(150, 30);
+            this.dtpFechaFin.TabIndex = 35;
+            this.dtpFechaFin.ValueChanged += new System.EventHandler(this.dtpFechaFin_ValueChanged);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(393, 112);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(26, 24);
+            this.label6.TabIndex = 36;
+            this.label6.Text = "A:";
             // 
             // FrmHorarios
             // 
@@ -305,6 +323,8 @@ namespace AbarrotesSandra_IR
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1067, 670);
             this.ControlBox = false;
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.dtpFechaFin);
             this.Controls.Add(this.pbCerrar);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
@@ -356,5 +376,7 @@ namespace AbarrotesSandra_IR
         private System.Windows.Forms.ComboBox cmbEmpleado;
         private System.Drawing.Printing.PrintDocument Printer;
         private System.Windows.Forms.PrintDialog printDialog1;
+        private System.Windows.Forms.DateTimePicker dtpFechaFin;
+        private System.Windows.Forms.Label label6;
     }
 }

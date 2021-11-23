@@ -151,7 +151,7 @@ namespace AbarrotesSandra_IR
                 if (rs == DialogResult.Yes)
                 {
                     r = mu.EliminarUsuarios(eu);
-                    MessageBox.Show(r);
+                    MessageBox.Show("Usuario eliminado correctamente");
                     eu.ID = 0;
                     fila = 0;
                     Actualizar();

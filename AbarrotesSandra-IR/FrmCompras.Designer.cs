@@ -67,7 +67,7 @@ namespace AbarrotesSandra_IR
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(23, 23);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(99, 29);
+            this.label2.Size = new System.Drawing.Size(123, 35);
             this.label2.TabIndex = 11;
             this.label2.Text = "Compras";
             // 
@@ -76,7 +76,7 @@ namespace AbarrotesSandra_IR
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(40, 100);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(108, 20);
+            this.label1.Size = new System.Drawing.Size(130, 24);
             this.label1.TabIndex = 14;
             this.label1.Text = "Buscar Producto";
             // 
@@ -84,7 +84,7 @@ namespace AbarrotesSandra_IR
             // 
             this.txtBusqueda.Location = new System.Drawing.Point(188, 97);
             this.txtBusqueda.Name = "txtBusqueda";
-            this.txtBusqueda.Size = new System.Drawing.Size(379, 26);
+            this.txtBusqueda.Size = new System.Drawing.Size(379, 30);
             this.txtBusqueda.TabIndex = 13;
             this.txtBusqueda.TextChanged += new System.EventHandler(this.txtBusqueda_TextChanged);
             this.txtBusqueda.DoubleClick += new System.EventHandler(this.txtBusqueda_DoubleClick);
@@ -94,6 +94,7 @@ namespace AbarrotesSandra_IR
             this.dvgCompras.AllowUserToAddRows = false;
             this.dvgCompras.AllowUserToDeleteRows = false;
             this.dvgCompras.AllowUserToResizeRows = false;
+            this.dvgCompras.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dvgCompras.BackgroundColor = System.Drawing.Color.DimGray;
             this.dvgCompras.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dvgCompras.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -166,7 +167,7 @@ namespace AbarrotesSandra_IR
             this.txtFecha.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.txtFecha.Location = new System.Drawing.Point(113, 92);
             this.txtFecha.Name = "txtFecha";
-            this.txtFecha.Size = new System.Drawing.Size(285, 26);
+            this.txtFecha.Size = new System.Drawing.Size(285, 30);
             this.txtFecha.TabIndex = 19;
             // 
             // btnCancelar
@@ -188,7 +189,7 @@ namespace AbarrotesSandra_IR
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(17, 323);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(48, 20);
+            this.label8.Size = new System.Drawing.Size(60, 24);
             this.label8.TabIndex = 31;
             this.label8.Text = "Total $";
             // 
@@ -210,7 +211,7 @@ namespace AbarrotesSandra_IR
             // 
             this.txtTotal.Location = new System.Drawing.Point(113, 320);
             this.txtTotal.Name = "txtTotal";
-            this.txtTotal.Size = new System.Drawing.Size(285, 26);
+            this.txtTotal.Size = new System.Drawing.Size(285, 30);
             this.txtTotal.TabIndex = 30;
             // 
             // label7
@@ -218,7 +219,7 @@ namespace AbarrotesSandra_IR
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(17, 272);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(61, 20);
+            this.label7.Size = new System.Drawing.Size(75, 24);
             this.label7.TabIndex = 29;
             this.label7.Text = "Cantidad";
             // 
@@ -226,7 +227,7 @@ namespace AbarrotesSandra_IR
             // 
             this.txtCantidad.Location = new System.Drawing.Point(113, 269);
             this.txtCantidad.Name = "txtCantidad";
-            this.txtCantidad.Size = new System.Drawing.Size(285, 26);
+            this.txtCantidad.Size = new System.Drawing.Size(285, 30);
             this.txtCantidad.TabIndex = 28;
             // 
             // label6
@@ -234,7 +235,7 @@ namespace AbarrotesSandra_IR
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(17, 213);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(73, 20);
+            this.label6.Size = new System.Drawing.Size(85, 24);
             this.label6.TabIndex = 27;
             this.label6.Text = "Proveedor";
             // 
@@ -243,7 +244,7 @@ namespace AbarrotesSandra_IR
             this.cmbProveedores.FormattingEnabled = true;
             this.cmbProveedores.Location = new System.Drawing.Point(113, 208);
             this.cmbProveedores.Name = "cmbProveedores";
-            this.cmbProveedores.Size = new System.Drawing.Size(285, 28);
+            this.cmbProveedores.Size = new System.Drawing.Size(285, 32);
             this.cmbProveedores.TabIndex = 26;
             // 
             // label5
@@ -251,7 +252,7 @@ namespace AbarrotesSandra_IR
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(17, 159);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(63, 20);
+            this.label5.Size = new System.Drawing.Size(75, 24);
             this.label5.TabIndex = 25;
             this.label5.Text = "Producto";
             // 
@@ -260,7 +261,7 @@ namespace AbarrotesSandra_IR
             this.cmbProductos.FormattingEnabled = true;
             this.cmbProductos.Location = new System.Drawing.Point(113, 154);
             this.cmbProductos.Name = "cmbProductos";
-            this.cmbProductos.Size = new System.Drawing.Size(285, 28);
+            this.cmbProductos.Size = new System.Drawing.Size(285, 32);
             this.cmbProductos.TabIndex = 24;
             // 
             // label4
@@ -268,7 +269,7 @@ namespace AbarrotesSandra_IR
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(17, 97);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(46, 20);
+            this.label4.Size = new System.Drawing.Size(55, 24);
             this.label4.TabIndex = 23;
             this.label4.Text = "Fecha";
             // 
@@ -277,7 +278,7 @@ namespace AbarrotesSandra_IR
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(17, 46);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(20, 20);
+            this.label3.Size = new System.Drawing.Size(24, 24);
             this.label3.TabIndex = 21;
             this.label3.Text = "Id";
             // 
@@ -286,7 +287,7 @@ namespace AbarrotesSandra_IR
             this.txtId.Enabled = false;
             this.txtId.Location = new System.Drawing.Point(113, 43);
             this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(285, 26);
+            this.txtId.Size = new System.Drawing.Size(285, 30);
             this.txtId.TabIndex = 20;
             // 
             // txtFechaBusqueda
@@ -295,7 +296,7 @@ namespace AbarrotesSandra_IR
             this.txtFechaBusqueda.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.txtFechaBusqueda.Location = new System.Drawing.Point(573, 97);
             this.txtFechaBusqueda.Name = "txtFechaBusqueda";
-            this.txtFechaBusqueda.Size = new System.Drawing.Size(209, 26);
+            this.txtFechaBusqueda.Size = new System.Drawing.Size(209, 30);
             this.txtFechaBusqueda.TabIndex = 9;
             this.txtFechaBusqueda.ValueChanged += new System.EventHandler(this.txtFechaBusqueda_ValueChanged);
             // 
@@ -323,7 +324,7 @@ namespace AbarrotesSandra_IR
             // 
             // FrmCompras
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1314, 676);

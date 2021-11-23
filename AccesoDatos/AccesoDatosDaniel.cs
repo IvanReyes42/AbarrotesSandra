@@ -9,8 +9,8 @@ namespace AccesoDatos
     public class AccesoDatosDaniel
     {
         SqlConnection conexion = new SqlConnection
-               ("data source=DANIELHP; Initial Catalog=AbarrotesSandra; User ID=sa; Password=Knj89%36L154ÑvR;");
-               //("data source=IVANREYESPC\\IVANREYES; Initial Catalog=Abarrotessandra; User ID=sa; Password=LaVacaLola42");
+               //("data source=DANIELHP; Initial Catalog=AbarrotesSandra; User ID=sa; Password=Knj89%36L154ÑvR;");
+               ("data source=IVANREYESPC\\IVANREYES; Initial Catalog=Abarrotessandra; User ID=sa; Password=LaVacaLola42");
 
         public bool GuardarUsuarios(EntidadUsuarios eu)
         {
@@ -145,13 +145,13 @@ namespace AccesoDatos
             }
         }
 
-        public DataSet ConsultarHorarios(string fecha)
+        public DataSet ConsultarHorarios(string fecha, string fechafin)
         {
             var conjunto = new DataSet();
 
             try
             {
-                var consultar = new SqlDataAdapter("EXEC ConsultarHorarios '" + fecha + "'", conexion);
+                var consultar = new SqlDataAdapter("EXEC ConsultarHorarios '" + fecha + "','"+fechafin+"'", conexion);
                 conexion.Open();
                 consultar.Fill(conjunto, "Horarios");
                 conexion.Close();

@@ -73,17 +73,17 @@ SET QUOTED_IDENTIFIER ON
 GO
 
 CREATE PROCEDURE ConsultarHorarios
-	@Fecha date
+	@Fecha date,
+	@FechaFin date
 	
 AS
 BEGIN
 	
-	SELECT h.IdHorario AS "ID", u.Nombre, u.ApellidoPaterno AS "Apellido Paterno", u.ApellidoMaterno AS "Apellido Materno", h.Fecha, h.Turno FROM Horarios h, Usuarios u WHERE h.FkIdEmpleado=u.IdUser AND  h.Fecha=@Fecha
+	SELECT h.IdHorario AS "ID", u.Nombre, u.ApellidoPaterno AS "Apellido Paterno", u.ApellidoMaterno AS "Apellido Materno", h.Fecha, h.Turno FROM Horarios h, Usuarios u WHERE h.FkIdEmpleado=u.IdUser AND  h.Fecha BETWEEN @Fecha and @FechaFin 
 END
 GO
 
 ------------------------------------------LLENAR COMBOBOX-----------------------------------------------------
-
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -96,6 +96,6 @@ BEGIN
 	
 	SET NOCOUNT ON;
 
-	SELECT CONCAT(Nombre, ' ', ApellidoPaterno, ' ', ApellidoMaterno) AS 'NombreCompleto' FROM Usuarios
+	SELECT CONCAT(Nombre, ' ', ApellidoPaterno, ' ', ApellidoMaterno) AS 'NombreCompleto' FROM Usuarios, Empleados where IdUser = FkIdUser 
 END
 GO

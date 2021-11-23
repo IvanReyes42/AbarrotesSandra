@@ -1,6 +1,9 @@
 ﻿using Entidades;
 using Manejadores;
+using Spire.Pdf;
 using System;
+using System.Collections.Generic;
+using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -10,6 +13,7 @@ namespace AbarrotesSandra_IR
     {
         ManejadorHorarios mh = new ManejadorHorarios();
         EntidadHorarios eh = new EntidadHorarios(0, "", "", "", "", "");
+        
         int fila = 0;
         string r;
         int id = 0;
@@ -35,7 +39,7 @@ namespace AbarrotesSandra_IR
         {
             try
             {
-                dgvHorario.DataSource = mh.ConsultarHorarios(dtpBuscar.Text).Tables[0];
+                dgvHorario.DataSource = mh.ConsultarHorarios(dtpBuscar.Text,dtpFechaFin.Text).Tables[0];
                 cmbEmpleado.DataSource = mh.LlenarComboEmpleados().Tables[0];
                 cmbEmpleado.DisplayMember = "NombreCompleto";
             }
@@ -76,6 +80,7 @@ namespace AbarrotesSandra_IR
         private void btnNuevo_Click(object sender, EventArgs e)
         {
             groupBox1.Enabled = true;
+            LimpiarCajas();
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
@@ -102,8 +107,17 @@ namespace AbarrotesSandra_IR
         {
             fila = e.RowIndex;
             GenerarDatos(fila);
+            LlenarDatos();
         }
-
+        public void LlenarDatos()
+        {
+            txtID.Text = eh.ID.ToString();
+            int index = cmbEmpleado.FindString(eh.Nombre + " " + eh.ApellidoP + " " + eh.ApellidoM);
+            cmbEmpleado.SelectedIndex = index;
+            dtpFecha.Text = eh.Fecha;
+            int indexT = cmbTurno.FindString(eh.Turno);
+            cmbTurno.SelectedIndex = indexT;
+        }
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             string nombre, apellidop, apellidom;
@@ -140,16 +154,26 @@ namespace AbarrotesSandra_IR
 
         private void btnImprimir_Click(object sender, EventArgs e)
         {
-            printDialog1.Document = Printer;
-            printDialog1.ShowDialog();
+            List<EntidadHorarios> lh = new List<EntidadHorarios>();
+            var Conjunto = mh.ConsultarHorarios(dtpBuscar.Text, dtpFechaFin.Text);
+            foreach (DataRow dr in Conjunto.Tables[0].Rows)
+            {
+                lh.Add(new EntidadHorarios(int.Parse(dr["ID"].ToString()), dr["Nombre"].ToString(), dr["Apellido Paterno"].ToString(), dr["Apellido Materno"].ToString(), dr["Fecha"].ToString(), dr["Turno"].ToString()));
+
+            }
+            PdfDocument pdf = new PdfDocument();
+            pdf.LoadFromFile(mh.ReporteHorarios(lh,dtpFecha.Text,dtpFechaFin.Text));
+            //Set the printer
+            var printerSettings = new System.Drawing.Printing.PrinterSettings();
+            var defaultPrinter = printerSettings.PrinterName;
+            //MessageBox.Show(defaultPrinter);
+            pdf.PrintSettings.PrinterName = defaultPrinter;
+            pdf.Print();
         }
 
-        private void Printer_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        private void dtpFechaFin_ValueChanged(object sender, EventArgs e)
         {
-            Bitmap map = new Bitmap(this.dgvHorario.Width, this.dgvHorario.Height);
-            dgvHorario.DrawToBitmap(map, new Rectangle(0, 0, dgvHorario.Width, dgvHorario.Height));
-            e.Graphics.DrawImage(map, 200, 150);
-            e.Graphics.DrawString("Horarios de " + dtpFecha, new Font("Arial", 16, FontStyle.Bold), Brushes.Black, new Point(300, 30));
+            Actualizar();
         }
     }
 }
